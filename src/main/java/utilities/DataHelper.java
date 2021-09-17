@@ -28,6 +28,9 @@ public class DataHelper {
 	public int getRandomNumber() {
 		return faker.number().numberBetween(1,999);
 	}
+	public String getRandomSevenDigitsNumber(){
+		return faker.number().digits(7);
+	}
 	public String getFullAddress() {
 		return faker.address().fullAddress();
 	}
@@ -36,5 +39,8 @@ public class DataHelper {
 	}
 	public String getState() {
 		return faker.address().state();
+	}
+	public String getPIN(){
+		return faker.address().zipCode();
 	}
 }

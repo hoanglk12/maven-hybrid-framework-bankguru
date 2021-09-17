@@ -40,7 +40,7 @@ public class New_Customer_02_Validate_Address extends BaseTest {
 		
 		log.info("New_Customer_02_Validate_Address_05 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page");
 		homePage.clickToLinkText(driver, "New Customer");
-		newCustomerPage = PageGeneratorManager.getCustomerPage(driver);
+		newCustomerPage = PageGeneratorManager.getNewCustomerPage(driver);
 		
 		log.info("New_Customer_02_Validate_Address_05 - Step 3 - Leave blank at Address Textbox");
 		newCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, newCustomerData02.ADDRESS_BLANK, "Address", "textarea", "addr");

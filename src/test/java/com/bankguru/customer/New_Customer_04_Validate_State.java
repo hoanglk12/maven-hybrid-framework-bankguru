@@ -41,7 +41,7 @@ public class New_Customer_04_Validate_State extends BaseTest {
 		
 		log.info("New_Customer_04_Validate_State_12 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page");
 		homePage.clickToLinkText(driver, "New Customer");
-		newCustomerPage = PageGeneratorManager.getCustomerPage(driver);
+		newCustomerPage = PageGeneratorManager.getNewCustomerPage(driver);
 		
 		log.info("New_Customer_04_Validate_State_12 - Step 3 - Leave blank at State Textbox");
 		newCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, newCustomerData04.STATE_BLANK, "State", "input", "state");

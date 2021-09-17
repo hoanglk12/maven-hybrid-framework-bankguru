@@ -40,7 +40,7 @@ public class New_Customer_01_Validate_Name extends BaseTest {
 		
 		log.info("New_Customer_01_Validate_Name_01 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page");
 		homePage.clickToLinkText(driver, "New Customer");
-		newCustomerPage = PageGeneratorManager.getCustomerPage(driver);
+		newCustomerPage = PageGeneratorManager.getNewCustomerPage(driver);
 		
 		log.info("New_Customer_01_Validate_Name_01 - Step 3 - Leave blank at Customer Textbox");
 		newCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, newCustomerData01.NAME_BLANK, "Customer Name", "input", "name");

@@ -41,7 +41,7 @@ public class New_Customer_03_Validate_City extends BaseTest {
 		
 		log.info("New_Customer_03_Validate_City_01 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page");
 		homePage.clickToLinkText(driver, "New Customer");
-		newCustomerPage = PageGeneratorManager.getCustomerPage(driver);
+		newCustomerPage = PageGeneratorManager.getNewCustomerPage(driver);
 		
 		log.info("New_Customer_03_Validate_City_01 - Step 3 - Leave blank at City Textbox");
 		newCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, newCustomerData03.CITY_BLANK, "City", "input", "city");
