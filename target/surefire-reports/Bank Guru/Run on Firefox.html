@@ -1,0 +1,287 @@
+<html>
+<head>
+<title>TestNG:  Run on Firefox</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Run on Firefox</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Sep 17 16:16:08 ICT 2021</td>
+</tr>
+<tr><td>Total time:</td><td>67 seconds (67091 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_01_Validate_Name.New_Customer_01_Validate_Name_01_Not_Empty()'><b>New_Customer_01_Validate_Name_01_Not_Empty</b><br>Test class: com.bankguru.customer.New_Customer_01_Validate_Name<br/>
+<a href="#Output-1075537833" onClick='toggleBox("Output-1075537833", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1075537833" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1075537833">
+[INFO ] [2021-09-17 16:16:40,137] New_Customer_01_Validate_Name_01 - Step 1 - Verify Welcome message is displayed at Home Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,171]  -------------------------- PASSED -------------------------- 
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,171] New_Customer_01_Validate_Name_01 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,630] New_Customer_01_Validate_Name_01 - Step 3 - Leave blank at Customer Textbox
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,743] New_Customer_01_Validate_Name_01 - Step 4 - Press Tab to move to next field
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,826] New_Customer_01_Validate_Name_01 - Step 5 - Verify error message is displayed with content 'Customer name must not be blank'
+<br><br/>
+[INFO ] [2021-09-17 16:16:40,841]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.customer.New_Customer_01_Validate_Name@63fd4873</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_01_Validate_Name.New_Customer_01_Validate_Name_02_Not_Numeric()'><b>New_Customer_01_Validate_Name_02_Not_Numeric</b><br>Test class: com.bankguru.customer.New_Customer_01_Validate_Name<br/>
+<a href="#Output-1798272295" onClick='toggleBox("Output-1798272295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1798272295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1798272295">
+[INFO ] [2021-09-17 16:16:40,976] New_Customer_01_Validate_Name_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:42,716] New_Customer_01_Validate_Name_02 - Step 2 - Enter to Customer Name textbox with data 'Gilda435'
+<br><br/>
+[INFO ] [2021-09-17 16:16:42,834] New_Customer_01_Validate_Name_02 - Step 3 - Verify error message is displayed with content 'Numbers are not allowed'
+<br><br/>
+[INFO ] [2021-09-17 16:16:42,852]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_01_Validate_Name@63fd4873</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_01_Validate_Name.New_Customer_01_Validate_Name_03_Not_Special_Characters()'><b>New_Customer_01_Validate_Name_03_Not_Special_Characters</b><br>Test class: com.bankguru.customer.New_Customer_01_Validate_Name<br/>
+<a href="#Output-2086062353" onClick='toggleBox("Output-2086062353", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2086062353" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2086062353">
+[INFO ] [2021-09-17 16:16:42,857] New_Customer_01_Validate_Name_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:44,692] New_Customer_01_Validate_Name_02 - Step 2 - Enter to Customer Name textbox with data 'Denisse%$#'
+<br><br/>
+[INFO ] [2021-09-17 16:16:44,817] New_Customer_01_Validate_Name_02 - Step 3 - Verify error message is displayed with content 'Special characters are not allowed'
+<br><br/>
+[INFO ] [2021-09-17 16:16:44,844]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_01_Validate_Name@63fd4873</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_01_Validate_Name.New_Customer_01_Validate_Name_04_Not_First_Character_Blank()'><b>New_Customer_01_Validate_Name_04_Not_First_Character_Blank</b><br>Test class: com.bankguru.customer.New_Customer_01_Validate_Name<br/>
+<a href="#Output-1657042048" onClick='toggleBox("Output-1657042048", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1657042048" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1657042048">
+[INFO ] [2021-09-17 16:16:44,848] New_Customer_01_Validate_Name_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:46,607] New_Customer_01_Validate_Name_02 - Step 2 - Enter to Customer Name textbox with data ' Lala'
+<br><br/>
+[INFO ] [2021-09-17 16:16:46,719] New_Customer_01_Validate_Name_02 - Step 3 - Verify error message is displayed with content 'First character can not have space'
+<br><br/>
+[INFO ] [2021-09-17 16:16:46,742]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_01_Validate_Name@63fd4873</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_02_Validate_Address.New_Customer_02_Validate_Address_05_Address_Not_Empty()'><b>New_Customer_02_Validate_Address_05_Address_Not_Empty</b><br>Test class: com.bankguru.customer.New_Customer_02_Validate_Address<br/>
+<a href="#Output-1340648545" onClick='toggleBox("Output-1340648545", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1340648545" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1340648545">
+[INFO ] [2021-09-17 16:16:54,778] New_Customer_02_Validate_Address_05 - Step 1 - Verify Welcome message is displayed at Home Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:54,798]  -------------------------- PASSED -------------------------- 
+<br><br/>
+[INFO ] [2021-09-17 16:16:54,798] New_Customer_02_Validate_Address_05 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:55,264] New_Customer_02_Validate_Address_05 - Step 3 - Leave blank at Address Textbox
+<br><br/>
+[INFO ] [2021-09-17 16:16:55,382] New_Customer_02_Validate_Address_05 - Step 4 - Press Tab to move to next field
+<br><br/>
+[INFO ] [2021-09-17 16:16:56,497] New_Customer_02_Validate_Address_05 - Step 5 - Verify error message is displayed with content 'Address Field must not be blank'
+<br><br/>
+[INFO ] [2021-09-17 16:16:56,523]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_02_Validate_Address@1e11bc55</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_02_Validate_Address.New_Customer_02_Validate_Address_06_Address_Not_First_Character_Blank()'><b>New_Customer_02_Validate_Address_06_Address_Not_First_Character_Blank</b><br>Test class: com.bankguru.customer.New_Customer_02_Validate_Address<br/>
+<a href="#Output-859658764" onClick='toggleBox("Output-859658764", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-859658764" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-859658764">
+[INFO ] [2021-09-17 16:16:56,526] New_Customer_02_Validate_Address_06 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:16:58,428] New_Customer_02_Validate_Address_06 - Step 2 - Enter to Customer Name textbox with data ' 89228 Donovan Ford, Goodwinberg, CT 72285'
+<br><br/>
+[INFO ] [2021-09-17 16:16:58,565] New_Customer_02_Validate_Address_06 - Step 3 - Verify error message is displayed with content 'First character can not have space'
+<br><br/>
+[INFO ] [2021-09-17 16:16:58,585]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.bankguru.customer.New_Customer_02_Validate_Address@1e11bc55</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_03_Validate_City.New_Customer_03_Validate_City_08_Not_Empty()'><b>New_Customer_03_Validate_City_08_Not_Empty</b><br>Test class: com.bankguru.customer.New_Customer_03_Validate_City<br/>
+<a href="#Output-1722529748" onClick='toggleBox("Output-1722529748", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1722529748" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1722529748">
+[INFO ] [2021-09-17 16:17:08,377] New_Customer_03_Validate_City_01 - Step 1 - Verify Welcome message is displayed at Home Page
+<br><br/>
+[INFO ] [2021-09-17 16:17:08,399]  -------------------------- PASSED -------------------------- 
+<br><br/>
+[INFO ] [2021-09-17 16:17:08,399] New_Customer_03_Validate_City_01 - Step 2 - Click on menu 'New Customer' >>> Navigate to New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:17:08,868] New_Customer_03_Validate_City_01 - Step 3 - Leave blank at City Textbox
+<br><br/>
+[INFO ] [2021-09-17 16:17:08,985] New_Customer_03_Validate_City_01 - Step 4 - Press Tab to move to next field
+<br><br/>
+[INFO ] [2021-09-17 16:17:09,051] New_Customer_03_Validate_City_01 - Step 5 - Verify error message is displayed with content 'City Field must not be blank'
+<br><br/>
+[INFO ] [2021-09-17 16:17:09,065]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.bankguru.customer.New_Customer_03_Validate_City@7544a1e4</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_03_Validate_City.New_Customer_03_Validate_City_09_Not_Numeric()'><b>New_Customer_03_Validate_City_09_Not_Numeric</b><br>Test class: com.bankguru.customer.New_Customer_03_Validate_City<br/>
+<a href="#Output-464458344" onClick='toggleBox("Output-464458344", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-464458344" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-464458344">
+[INFO ] [2021-09-17 16:17:09,068] New_Customer_03_Validate_City_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:17:10,938] New_Customer_03_Validate_City_02 - Step 2 - Enter to City textbox with data 'New Ciara717'
+<br><br/>
+[INFO ] [2021-09-17 16:17:11,067] New_Customer_03_Validate_City_02 - Step 3 - Verify error message is displayed with content 'Numbers are not allowed'
+<br><br/>
+[INFO ] [2021-09-17 16:17:11,087]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.bankguru.customer.New_Customer_03_Validate_City@7544a1e4</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_03_Validate_City.New_Customer_03_Validate_City_10_Not_Special_Characters()'><b>New_Customer_03_Validate_City_10_Not_Special_Characters</b><br>Test class: com.bankguru.customer.New_Customer_03_Validate_City<br/>
+<a href="#Output-1724321304" onClick='toggleBox("Output-1724321304", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1724321304" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1724321304">
+[INFO ] [2021-09-17 16:17:11,125] New_Customer_03_Validate_City_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:17:12,804] New_Customer_03_Validate_City_02 - Step 2 - Enter to City textbox with data 'New Kirstenville%$#'
+<br><br/>
+[INFO ] [2021-09-17 16:17:12,934] New_Customer_03_Validate_City_02 - Step 3 - Verify error message is displayed with content 'Special characters are not allowed'
+<br><br/>
+[INFO ] [2021-09-17 16:17:12,960]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_03_Validate_City@7544a1e4</td></tr>
+<tr>
+<td title='com.bankguru.customer.New_Customer_03_Validate_City.New_Customer_03_Validate_City_11_Not_First_Character_Blank()'><b>New_Customer_03_Validate_City_11_Not_First_Character_Blank</b><br>Test class: com.bankguru.customer.New_Customer_03_Validate_City<br/>
+<a href="#Output-283461405" onClick='toggleBox("Output-283461405", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-283461405" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-283461405">
+[INFO ] [2021-09-17 16:17:12,963] New_Customer_03_Validate_City_02 - Step 1 - Refresh New Customer Page
+<br><br/>
+[INFO ] [2021-09-17 16:17:14,613] New_Customer_03_Validate_City_02 - Step 2 - Enter to City textbox with data ' Leuschkeside'
+<br><br/>
+[INFO ] [2021-09-17 16:17:14,727] New_Customer_03_Validate_City_02 - Step 3 - Verify error message is displayed with content 'First character can not have space'
+<br><br/>
+[INFO ] [2021-09-17 16:17:14,748]  -------------------------- PASSED -------------------------- 
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.bankguru.customer.New_Customer_03_Validate_City@7544a1e4</td></tr>
+</table><p>
+</body>
+</html>

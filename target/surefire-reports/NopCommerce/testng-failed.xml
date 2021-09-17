@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [NopCommerce]">
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
+  <parameter name="urlAdmin" value="https://admin-demo.nopcommerce.com/login?ReturnUrl=/admin/"/>
+  <listeners>
+    <listener class-name="reportConfig.MethodListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="reportConfig.ReportNGListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Run on Firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Admin">
+        <methods>
+          <include name="Admin_15_Delete_Address"/>
+          <include name="initBrowser"/>
+          <include name="Admin_01_Search_With_Product_Name"/>
+          <include name="Admin_14_Edit_Address"/>
+          <include name="Admin_03_Search_With_Product_Name_Parent_Category_Checked"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="Admin_04_Search_With_Product_Name_Child_Category"/>
+          <include name="Admin_13_Add_New_Address"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.nopcommerce.admin.Admin -->
+    </classes>
+  </test> <!-- Run on Firefox(failed) -->
+  <test thread-count="5" verbose="0" name="Run on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Admin">
+        <methods>
+          <include name="Admin_09_Search_Customer_With_FirstName_LastName"/>
+          <include name="initBrowser"/>
+          <include name="Admin_01_Search_With_Product_Name"/>
+          <include name="Admin_10_Search_Customer_With_Company"/>
+          <include name="Admin_03_Search_With_Product_Name_Parent_Category_Checked"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="Admin_04_Search_With_Product_Name_Child_Category"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.nopcommerce.admin.Admin -->
+    </classes>
+  </test> <!-- Run on Chrome(failed) -->
+  <test thread-count="5" verbose="0" name="Run on Edge Chromium(failed)">
+    <parameter name="browser" value="edge_chromium"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Admin">
+        <methods>
+          <include name="Admin_09_Search_Customer_With_FirstName_LastName"/>
+          <include name="initBrowser"/>
+          <include name="Admin_01_Search_With_Product_Name"/>
+          <include name="Admin_10_Search_Customer_With_Company"/>
+          <include name="Admin_03_Search_With_Product_Name_Parent_Category_Checked"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="Admin_04_Search_With_Product_Name_Child_Category"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.nopcommerce.admin.Admin -->
+    </classes>
+  </test> <!-- Run on Edge Chromium(failed) -->
+</suite> <!-- Failed suite [NopCommerce] -->

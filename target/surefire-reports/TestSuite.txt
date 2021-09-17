@@ -1,0 +1,191 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 192, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 1,562.936 s <<< FAILURE! - in TestSuite
+Admin_01_Search_With_Product_Name(com.nopcommerce.admin.Admin)  Time elapsed: 34.581 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+
+Admin_03_Search_With_Product_Name_Parent_Category_Checked(com.nopcommerce.admin.Admin)  Time elapsed: 35.171 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+
+Admin_04_Search_With_Product_Name_Child_Category(com.nopcommerce.admin.Admin)  Time elapsed: 35.609 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+
+Admin_13_Add_New_Address(com.nopcommerce.admin.Admin)  Time elapsed: 9.899 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+The element reference of <option> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+	at com.nopcommerce.admin.Admin.Admin_13_Add_New_Address(Admin.java:441)
+
+Admin_14_Edit_Address(com.nopcommerce.admin.Admin)  Time elapsed: 30.086 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(.,'back to customer list')] (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_14_Edit_Address(Admin.java:482)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //a[contains(.,'back to customer list')]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+*** Element info: {Using=xpath, value=//a[contains(.,'back to customer list')]}
+	at com.nopcommerce.admin.Admin.Admin_14_Edit_Address(Admin.java:482)
+
+Admin_15_Delete_Address(com.nopcommerce.admin.Admin)  Time elapsed: 30.086 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(.,'back to customer list')] (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_15_Delete_Address(Admin.java:585)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //a[contains(.,'back to customer list')]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 92.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20210903235534, moz:geckodriverVersion: 0.29.1, moz:headless: false, moz:processID: 10580, moz:profile: C:\Users\HP95\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a285db63-c79a-44e8-b916-d26a3befa1d8
+*** Element info: {Using=xpath, value=//a[contains(.,'back to customer list')]}
+	at com.nopcommerce.admin.Admin.Admin_15_Delete_Address(Admin.java:585)
+
+Admin_01_Search_With_Product_Name(com.nopcommerce.admin.Admin)  Time elapsed: 34.607 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\HP95\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff2ceb641e5a144cc2f238c974657ef5
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+
+Admin_03_Search_With_Product_Name_Parent_Category_Checked(com.nopcommerce.admin.Admin)  Time elapsed: 33.887 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\HP95\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff2ceb641e5a144cc2f238c974657ef5
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+
+Admin_04_Search_With_Product_Name_Child_Category(com.nopcommerce.admin.Admin)  Time elapsed: 34.834 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: chrome=93.0.4577.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\HP95\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55033}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ff2ceb641e5a144cc2f238c974657ef5
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+
+Admin_09_Search_Customer_With_FirstName_LastName(com.nopcommerce.admin.Admin)  Time elapsed: 6.96 s  <<< FAILURE!
+java.lang.AssertionError: expected [1] but found [2]
+	at com.nopcommerce.admin.Admin.Admin_09_Search_Customer_With_FirstName_LastName(Admin.java:296)
+
+Admin_10_Search_Customer_With_Company(com.nopcommerce.admin.Admin)  Time elapsed: 6.763 s  <<< FAILURE!
+java.lang.AssertionError: expected [1] but found [2]
+	at com.nopcommerce.admin.Admin.Admin_10_Search_Customer_With_Company(Admin.java:309)
+
+Admin_01_Search_With_Product_Name(com.nopcommerce.admin.Admin)  Time elapsed: 34.088 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: MicrosoftEdge=93.0.961.47)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 93.0.961.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:51665}, msedge: {msedgedriverVersion: 93.0.961.47 (c316d5ea591c75..., userDataDir: C:\Users\HP95\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 35905bac8ce41dbe23764ce13f6eeabe
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_01_Search_With_Product_Name(Admin.java:107)
+
+Admin_03_Search_With_Product_Name_Parent_Category_Checked(com.nopcommerce.admin.Admin)  Time elapsed: 34.009 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: MicrosoftEdge=93.0.961.47)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 93.0.961.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:51665}, msedge: {msedgedriverVersion: 93.0.961.47 (c316d5ea591c75..., userDataDir: C:\Users\HP95\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 35905bac8ce41dbe23764ce13f6eeabe
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_03_Search_With_Product_Name_Parent_Category_Checked(Admin.java:155)
+
+Admin_04_Search_With_Product_Name_Child_Category(com.nopcommerce.admin.Admin)  Time elapsed: 36.064 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i (tried for 30 second(s) with 500 milliseconds interval)
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i"}
+  (Session info: MicrosoftEdge=93.0.961.47)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AL3VMHN', ip: '192.168.250.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 93.0.961.47, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:51665}, msedge: {msedgedriverVersion: 93.0.961.47 (c316d5ea591c75..., userDataDir: C:\Users\HP95\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 35905bac8ce41dbe23764ce13f6eeabe
+*** Element info: {Using=xpath, value=//td[text()='Lenovo IdeaCentre 600 All-in-One PC']/following-sibling::td[text()='LE_IC_600']/following-sibling::td[text()='500']/following-sibling::td[text()='10000']/following-sibling::td[contains(@class,'text-center')]/i}
+	at com.nopcommerce.admin.Admin.Admin_04_Search_With_Product_Name_Child_Category(Admin.java:179)
+
+Admin_09_Search_Customer_With_FirstName_LastName(com.nopcommerce.admin.Admin)  Time elapsed: 6.968 s  <<< FAILURE!
+java.lang.AssertionError: expected [1] but found [3]
+	at com.nopcommerce.admin.Admin.Admin_09_Search_Customer_With_FirstName_LastName(Admin.java:296)
+
+Admin_10_Search_Customer_With_Company(com.nopcommerce.admin.Admin)  Time elapsed: 6.988 s  <<< FAILURE!
+java.lang.AssertionError: expected [1] but found [3]
+	at com.nopcommerce.admin.Admin.Admin_10_Search_Customer_With_Company(Admin.java:309)
+

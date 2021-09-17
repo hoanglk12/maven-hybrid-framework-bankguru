@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Edge Chromium"
+           tests="9"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.441">
+  <properties />
+  
+  
+            <testcase name="Search_Advanced_Search_00_Login_To_Page" time="5.028" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_04_Search_With_Product_Name_Precisely" time="1.430" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_06_Advanced_Search_With_Sub_Categories" time="1.774" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_02_Search_With_Data_Exist" time="0.780" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_03_Search_With_Product_Name_Relatively" time="1.484" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_08_Advanced_Search_With_Correct_Manufacturer" time="1.082" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_01_Search_With_Empty_Data" time="2.589" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_07_Advanced_Search_With_Incorrect_Manufacturer" time="1.120" classname="com.nopcommerce.search.Search_Advanced_Search" />
+                <testcase name="Search_Advanced_Search_05_Advanced_Search_With_Parent_Categories" time="1.154" classname="com.nopcommerce.search.Search_Advanced_Search" />
+      
+</testsuite>

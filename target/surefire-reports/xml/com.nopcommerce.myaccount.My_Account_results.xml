@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Edge Chromium"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="26.449">
+  <properties />
+  
+  
+            <testcase name="My_Account_04_Add_Review" time="11.086" classname="com.nopcommerce.myaccount.My_Account" />
+                <testcase name="My_Account_03_Change_Info" time="2.087" classname="com.nopcommerce.myaccount.My_Account" />
+                <testcase name="My_Account_01_Update_Customer_Info" time="4.398" classname="com.nopcommerce.myaccount.My_Account" />
+                <testcase name="My_Account_00_Login_To_Page" time="3.140" classname="com.nopcommerce.myaccount.My_Account" />
+                <testcase name="My_Account_02_Add_Addresses" time="5.738" classname="com.nopcommerce.myaccount.My_Account" />
+      
+</testsuite>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Bank Guru" parallel="false">
+	<listeners>
+		<listener class-name="reportConfig.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="reportConfig.ReportNGListener" />
+	</listeners>
+	<parameter name="urlBankGuru" value="http://demo.guru99.com/v4/" />
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+		</classes>
+	</test> 
+	<test name="Run on Firefox Headless">
+		<parameter name="browser" value="headless_firefox" />
+		<classes>
+			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />-->
+		</classes>
+	</test> 
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+		</classes>
+	</test> 
+	<test name="Run on Edge Chromium">
+		<parameter name="browser" value="edge_chromium" />
+		<classes>
+			<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+		</classes>
+	</test> 
+	<test name="Run on Internet Explorer">
+		<parameter name="browser" value="internetexplorer" />
+		<classes>
+			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />-->
+		</classes>
+	</test> 
+</suite> 

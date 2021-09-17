@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.311">
+  <properties />
+  
+  
+            <testcase name="New_Customer_01_Validate_Name_02_Not_Numeric" time="0.519" classname="com.bankguru.customer.New_Customer_01_Validate_Name" />
+                <testcase name="New_Customer_01_Validate_Name_01_Not_Empty" time="0.762" classname="com.bankguru.customer.New_Customer_01_Validate_Name" />
+                <testcase name="New_Customer_01_Validate_Name_03_Not_Special_Characters" time="0.516" classname="com.bankguru.customer.New_Customer_01_Validate_Name" />
+                <testcase name="New_Customer_01_Validate_Name_04_Not_First_Character_Blank" time="0.514" classname="com.bankguru.customer.New_Customer_01_Validate_Name" />
+      
+</testsuite>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [NopCommerce]">
+  <parameter name="url" value="https://demo.nopcommerce.com/"/>
+  <parameter name="urlAdmin" value="https://admin-demo.nopcommerce.com/login?ReturnUrl=/admin/"/>
+  <listeners>
+    <listener class-name="reportConfig.MethodListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="reportConfig.ReportNGListener"/>
+  </listeners>
+  <test thread-count="5" name="Run on Firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Admin">
+        <methods>
+          <include name="Admin_09_Search_Customer_With_FirstName_LastName"/>
+          <include name="initBrowser"/>
+          <include name="Admin_10_Search_Customer_With_Company"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.nopcommerce.admin.Admin -->
+    </classes>
+  </test> <!-- Run on Firefox(failed) -->
+  <test thread-count="5" name="Run on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nopcommerce.admin.Admin">
+        <methods>
+          <include name="Admin_09_Search_Customer_With_FirstName_LastName"/>
+          <include name="initBrowser"/>
+          <include name="Admin_10_Search_Customer_With_Company"/>
+          <include name="deleteAllFilesInReportNGScreenshot"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.nopcommerce.admin.Admin -->
+    </classes>
+  </test> <!-- Run on Chrome(failed) -->
+</suite> <!-- Failed suite [NopCommerce] -->
