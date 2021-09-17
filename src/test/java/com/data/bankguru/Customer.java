@@ -49,6 +49,20 @@ public class Customer {
 		public String ERROR_MSG_NOT_SPECIAL_CHAR = "Special characters are not allowed";
 		public String ERROR_MSG_FIRST_CHAR_BLANK = "First character can not have space";
 	}
+	public static class New_Customer_04{
+		Customer customer = Customer.getCustomer();
+		public static New_Customer_04 getNewCustomer04() {
+			return new New_Customer_04();
+		}
+		public String STATE_BLANK = "";
+		public String STATE_NUMERIC = customer.dataHelper.getState() + String.valueOf(customer.dataHelper.getRandomNumber());
+		public String STATE_SPECIAL_CHAR = customer.dataHelper.getState() + "%$#";
+		public String STATE_FIRST_CHAR_BLANK = " " + customer.dataHelper.getState();
+		public String ERROR_MSG_STATE_BLANK = "State must not be blank";
+		public String ERROR_MSG_STATE_NOT_NUMERIC = "Numbers are not allowed";
+		public String ERROR_MSG_NOT_SPECIAL_CHAR = "Special characters are not allowed";
+		public String ERROR_MSG_FIRST_CHAR_BLANK = "First character can not have space";
+	}
 	
 
 }

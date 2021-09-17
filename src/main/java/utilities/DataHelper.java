@@ -34,4 +34,7 @@ public class DataHelper {
 	public String getCity() {
 		return faker.address().cityName();
 	}
+	public String getState() {
+		return faker.address().state();
+	}
 }

@@ -15,6 +15,7 @@
 			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
 			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
 			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">
@@ -29,19 +30,19 @@
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
 			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
 			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
-			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />-->
 		</classes>
 	</test> 
 	<test name="Run on Edge Chromium">
 		<parameter name="browser" value="edge_chromium" />
 		<classes>
-			<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
 			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
 			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
-			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />-->
 		</classes>
 	</test> 
 	<test name="Run on Internet Explorer">
