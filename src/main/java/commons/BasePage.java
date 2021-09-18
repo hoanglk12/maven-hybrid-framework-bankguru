@@ -375,6 +375,10 @@ public class BasePage {
 		jsExecutor = (JavascriptExecutor)driver;
 		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getElement(driver, locator));
 	}
+	public void removeAttributeInDOM(WebDriver driver, String locator, String attributeRemove, String...params) {
+		jsExecutor = (JavascriptExecutor)driver;
+		jsExecutor.executeScript("arguments[0].removeAttribute('" + attributeRemove + "');", getElement(driver, getDynamicLocator(locator, params)));
+	}
 	public String getElementValidationMessage(WebDriver driver, String locator) {
 		jsExecutor = (JavascriptExecutor)driver;
 		return (String) jsExecutor.executeScript("return arguments[0].validationMessage;", getElement(driver, locator));
@@ -683,6 +687,9 @@ public class BasePage {
 	public void pressKeyboardToElementByTextTagAndName(WebDriver driver, Keys key, String textField, String tagType, String idValue) {
 		waitForElementVisible(driver, BankGuruBasePageUI.DYNAMIC_TEXTBOX_TEXTAREA, textField, tagType, idValue);
 		getElement(driver, getDynamicLocator(BankGuruBasePageUI.DYNAMIC_TEXTBOX_TEXTAREA, textField, tagType, idValue)).sendKeys(key);
+	}
+	public String getTextValueByRowName(WebDriver driver, String rowName) {
+		return getTextElement(driver, BankGuruBasePageUI.DYNAMIC_VALUE_BY_ROW_NAME, rowName);
 	}
 	private Alert alert;
 	private WebDriverWait explicitWait; 

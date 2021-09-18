@@ -1,4 +1,4 @@
-package com.bankguru.login;
+package com.bankguru.common;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
@@ -17,7 +17,7 @@ public class Login_01_Register_And_Login extends BaseTest {
 	
 	@Parameters({"browser","urlBankGuru"})
 	@BeforeTest
-	public void initBrowser(String browser, String urlBankGuru) {
+	public void registerAndLogin(String browser, String urlBankGuru) {
 		driver = getBrowser(browser, urlBankGuru);
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		loginPageUrl = loginPage.getCurrentPageUrl(driver);

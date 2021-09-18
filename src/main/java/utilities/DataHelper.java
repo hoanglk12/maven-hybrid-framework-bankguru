@@ -1,5 +1,7 @@
 package utilities;
 
+import java.text.SimpleDateFormat;
+
 import com.github.javafaker.Faker;
 
 public class DataHelper {
@@ -22,6 +24,13 @@ public class DataHelper {
 	public String getFullName() {
 		return getFirstName() + " " + getLastName();
 	}
+	public String getBirthday() {
+		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+		return formatter.format(faker.date().birthday(18, 30));
+	}
+	public String getCellPhoneNumber() {
+		return faker.phoneNumber().cellPhone();
+	}
 	public String getPassword() {
 		return faker.internet().password();
 	}
@@ -31,8 +40,17 @@ public class DataHelper {
 	public String getRandomSevenDigitsNumber(){
 		return faker.number().digits(7);
 	}
+	public String getRandomTenDigitsNumber(){
+		return faker.number().digits(10);
+	}
+	public String getRandomSixDigitsNumber(){
+		return faker.number().digits(6);
+	}
 	public String getFullAddress() {
 		return faker.address().fullAddress();
+	}
+	public String getStreetAddress() {
+		return faker.address().streetAddress();
 	}
 	public String getCity() {
 		return faker.address().cityName();

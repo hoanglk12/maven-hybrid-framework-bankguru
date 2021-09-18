@@ -12,7 +12,23 @@ public class Customer {
     public Customer() {
         dataHelper = DataHelper.getDataHelper();
     }
+    
+    public static class Common{
+    	Customer customer = Customer.getCustomer();
 
+        public static Common getCommon() {
+            return new Common();
+        }
+        public String NEW_CUSTOMER_NAME = customer.dataHelper.getFullName();
+        public String NEW_CUSTOMER_DATE_OF_BIRTH = customer.dataHelper.getBirthday();
+        public String NEW_CUSTOMER_ADDRESS = customer.dataHelper.getStreetAddress();
+        public String NEW_CUSTOMER_CITY = customer.dataHelper.getCity();
+        public String NEW_CUSTOMER_STATE = customer.dataHelper.getState();
+        public String NEW_CUSTOMER_PIN = customer.dataHelper.getRandomSixDigitsNumber();
+        public String NEW_CUSTOMER_PHONE = customer.dataHelper.getRandomTenDigitsNumber();
+        public String NEW_CUSTOMER_EMAIL = customer.dataHelper.getEmailAddress();
+        public String NEW_CUSTOMER_PASSWORD = customer.dataHelper.getPassword();
+    }
     public static class New_Customer_01 {
         Customer customer = Customer.getCustomer();
 
@@ -81,19 +97,22 @@ public class Customer {
     public static class New_Customer_05 {
         Customer customer = Customer.getCustomer();
 
-        public static New_Customer_05 getNewCustomer04() {
+        public static New_Customer_05 getNewCustomer05() {
             return new New_Customer_05();
         }
 
         public String PIN_NUMERIC = customer.dataHelper.getRandomNumber() + "PIN";
         public String PIN_BLANK = "";
-        public String PIN_SIX_DIGITS = String.valueOf(customer.dataHelper.getRandomNumber());
+        public String PIN_LESS_SIX_DIGITS = String.valueOf(customer.dataHelper.getRandomNumber());
+        public String PIN_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
         public String PIN_FIRST_CHAR_BLANK = " " + customer.dataHelper.getPIN();
-        public String ERROR_MSG_STATE_BLANK = "PIN Code must not be blank";
+        public String PIN_SPACE = " ";
         public String ERROR_MSG_PIN_NUMERIC = "Characters are not allowed";
-        public String ERROR_MSG_PIN_SIX_DIGITS = "PIN Code must have 6 Digits";
-        public String ERROR_MSG_NOT_SPECIAL_CHAR = "Special characters are not allowed";
-        public String ERROR_MSG_FIRST_CHAR_BLANK = "First character can not have space";
+        public String ERROR_MSG_PIN_BLANK = "PIN Code must not be blank";
+        public String ERROR_MSG_PIN_NOT_SIX_DIGITS = "PIN Code must have 6 Digits";
+        public String ERROR_MSG_PIN_SPECIAL_CHAR = "Special characters are not allowed";
+        public String ERROR_MSG_PIN_FIRST_CHAR_BLANK = "First character can not have space";
+        public String ERROR_MSG_PIN_SPACE = "First character can not have space";
     }
 
 

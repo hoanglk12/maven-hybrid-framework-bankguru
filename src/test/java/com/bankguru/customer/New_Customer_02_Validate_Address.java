@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.bankguru.login.Login_01_Register_And_Login;
+import com.bankguru.common.Login_01_Register_And_Login;
 import com.data.bankguru.Customer.New_Customer_02;
 
 import commons.BaseTest;
