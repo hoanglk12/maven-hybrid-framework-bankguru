@@ -19,7 +19,7 @@ public class Customer {
         public static Common getCommon() {
             return new Common();
         }
-        public String NEW_CUSTOMER_NAME = customer.dataHelper.getFullName();
+        public String NEW_CUSTOMER_NAME = customer.dataHelper.getFirstName();
         public String NEW_CUSTOMER_DATE_OF_BIRTH = customer.dataHelper.getBirthday();
         public String NEW_CUSTOMER_ADDRESS = customer.dataHelper.getStreetAddress();
         public String NEW_CUSTOMER_CITY = customer.dataHelper.getCity();
