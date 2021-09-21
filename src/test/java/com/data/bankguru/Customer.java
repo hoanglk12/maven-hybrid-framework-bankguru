@@ -95,24 +95,43 @@ public class Customer {
     }
 
     public static class New_Customer_05 {
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static New_Customer_05 getNewCustomer05() {
+    		return new New_Customer_05();
+    	}
+    	
+    	public String PIN_NUMERIC = customer.dataHelper.getRandomNumber() + "PIN";
+    	public String PIN_BLANK = "";
+    	public String PIN_LESS_SIX_DIGITS = String.valueOf(customer.dataHelper.getRandomNumber());
+    	public String PIN_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+    	public String PIN_FIRST_CHAR_BLANK = " " + customer.dataHelper.getPIN();
+    	public String PIN_SPACE = " ";
+    	public String ERROR_MSG_PIN_NUMERIC = "Characters are not allowed";
+    	public String ERROR_MSG_PIN_BLANK = "PIN Code must not be blank";
+    	public String ERROR_MSG_PIN_NOT_SIX_DIGITS = "PIN Code must have 6 Digits";
+    	public String ERROR_MSG_PIN_SPECIAL_CHAR = "Special characters are not allowed";
+    	public String ERROR_MSG_PIN_FIRST_CHAR_BLANK = "First character can not have space";
+    	public String ERROR_MSG_PIN_SPACE = "First character can not have space";
+    }
+    public static class New_Customer_06 {
         Customer customer = Customer.getCustomer();
 
-        public static New_Customer_05 getNewCustomer05() {
-            return new New_Customer_05();
+        public static New_Customer_06 getNewCustomer06() {
+            return new New_Customer_06();
         }
 
-        public String PIN_NUMERIC = customer.dataHelper.getRandomNumber() + "PIN";
-        public String PIN_BLANK = "";
-        public String PIN_LESS_SIX_DIGITS = String.valueOf(customer.dataHelper.getRandomNumber());
-        public String PIN_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
-        public String PIN_FIRST_CHAR_BLANK = " " + customer.dataHelper.getPIN();
-        public String PIN_SPACE = " ";
-        public String ERROR_MSG_PIN_NUMERIC = "Characters are not allowed";
-        public String ERROR_MSG_PIN_BLANK = "PIN Code must not be blank";
-        public String ERROR_MSG_PIN_NOT_SIX_DIGITS = "PIN Code must have 6 Digits";
-        public String ERROR_MSG_PIN_SPECIAL_CHAR = "Special characters are not allowed";
-        public String ERROR_MSG_PIN_FIRST_CHAR_BLANK = "First character can not have space";
-        public String ERROR_MSG_PIN_SPACE = "First character can not have space";
+       
+        public String PHONE_BLANK = "";
+        public String PHONE_FIRST_CHAR_BLANK = " " + customer.dataHelper.getRandomNumber();
+        public String PHONE_SPACE = customer.dataHelper.getRandomNumber() + " " + customer.dataHelper.getRandomNumber();;
+        public String PHONE_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+      
+        public String ERROR_MSG_PHONE_BLANK = "Mobile no must not be blank";
+        public String ERROR_MSG_PHONE_FIRST_CHAR_BLANK = "First character can not have space";
+        public String ERROR_MSG_PHONE_SPACE = "Characters are not allowed";
+        public String ERROR_MSG_PHONE_SPECIAL_CHAR = "Special characters are not allowed";
+        
     }
 
 
