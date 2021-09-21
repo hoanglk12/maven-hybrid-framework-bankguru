@@ -5,7 +5,7 @@
 	<artifactId>com.hybrid.bankguru</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>maven-hybrid-framework-bankgruru</name>
-	<!--Global Variable-->
+	<!--Global Variable -->
 	<properties>
 		<!-- Encoding for Build/ Console -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -130,6 +130,12 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.aeonbits.owner</groupId>
+			<artifactId>owner</artifactId>
+			<version>1.0.12</version>
+		</dependency>
 	</dependencies>
 
 	<!-- Compiler/ Run Test -->
@@ -156,7 +162,7 @@
 					<!-- Run TestNG xml file -->
 					<suiteXmlFiles>
 						<file>src/test/resources/runBankGuruTestcases.xml</file>
-						<file>src/test/resources/runNopCommerceTestcases.xml</file>
+						<!--<file>src/test/resources/runNopCommerceTestcases.xml</file>-->
 					</suiteXmlFiles>
 
 					<!-- Argument -->

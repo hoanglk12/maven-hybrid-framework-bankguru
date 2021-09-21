@@ -1,5 +1,6 @@
 package com.bankguru.customer;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -11,6 +12,7 @@ import com.bankguru.common.Login_01_Register_And_Login;
 import com.data.bankguru.Customer.New_Customer_03;
 
 import commons.BaseTest;
+import environmentConfig.Environment;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.NewCustomerPageObject;
@@ -19,10 +21,14 @@ import pageObjects.bankGuru.RegisterPageObject;
 
 public class New_Customer_03_Validate_City extends BaseTest {
 	WebDriver driver;
-	@Parameters({"browser","urlBankGuru"})
+	Environment environment;
+	@Parameters({"browser"})
 	@BeforeClass
-	public void initBrowser(String browser, String urlBankGuru) {
-		driver = getBrowser(browser, urlBankGuru);
+	public void initBrowser(String browser) {
+		String environmentName = System.getProperty("envMaven");
+		ConfigFactory.setProperty("env", environmentName);
+		environment = ConfigFactory.create(Environment.class);
+		driver = getBrowser(browser, environment.appUrl());
 		newCustomerData03 = New_Customer_03.getNewCustomer03();
 		
 		loginPage = PageGeneratorManager.getLoginPage(driver);

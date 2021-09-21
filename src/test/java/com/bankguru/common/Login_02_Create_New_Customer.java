@@ -1,5 +1,6 @@
 package com.bankguru.common;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -7,6 +8,7 @@ import org.testng.annotations.Test;
 import com.data.bankguru.Customer.Common;
 
 import commons.BaseTest;
+import environmentConfig.Environment;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.NewCustomerPageObject;
@@ -14,12 +16,16 @@ import pageObjects.bankGuru.PageGeneratorManager;
 
 public class Login_02_Create_New_Customer extends BaseTest {
 	WebDriver driver;
+	Environment environment;
 	public static String customerID;
 	
-	@Parameters({"browser","urlBankGuru"})
+	@Parameters({"browser"})
 	@Test
-	public void createNewCustomer(String browser, String urlBankGuru) {
-		driver = getBrowser(browser, urlBankGuru);
+	public void createNewCustomer(String browser) {
+		String environmentName = System.getProperty("envMaven");
+		ConfigFactory.setProperty("env", environmentName);
+		environment = ConfigFactory.create(Environment.class);
+		driver = getBrowser(browser, environment.appUrl());
 		commonData = Common.getCommon();
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
 		loginPage = PageGeneratorManager.getLoginPage(driver);
@@ -44,7 +50,7 @@ public class Login_02_Create_New_Customer extends BaseTest {
 		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_PASSWORD, "Password", "input", "password");
 		newCustomerPage.clickToButtonByNameAttribute(driver, "sub");
 		customerID = newCustomerPage.getTextValueByRowName(driver, "Customer ID");
-		closeDriverInstance();
+		closeBrowserAndDriver();
 	}
 
 	

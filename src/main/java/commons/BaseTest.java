@@ -43,10 +43,28 @@ public class BaseTest {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 		if (browser == BROWSER.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-geolocation");
+			System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.BROWSER_LOGS_FOLDER_PATH + File.separator + "FirefoxLog.log");
+			driver = new FirefoxDriver(options);
 		} else if (browser == BROWSER.CHROME) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			options.setExperimentalOption("prefs", prefs);
+			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-geolocation");
+			options.setExperimentalOption("useAutomationExtension", false);
+			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+			System.setProperty("webdriver.chrome.args", "--disable-logging");
+			System.setProperty("webdriver.chrome.silentOutput", "true");
+			driver = new ChromeDriver(options);
 		} else if (browser == BROWSER.EDGE_CHROMIUM) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
@@ -70,10 +88,11 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		
 		return driver;
 	}
 
-	protected WebDriver getBrowser(String browserName, String urlPage) {
+	protected WebDriver getBrowser(String browserName, String appUrl) {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 		if (browser == BROWSER.FIREFOX) {
 			WebDriverManager.firefoxdriver().setup();
@@ -122,8 +141,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(urlPage);
-
+		driver.get(appUrl);
 		return driver;
 	}
 
@@ -207,7 +225,7 @@ public class BaseTest {
 				}
 			}
 		} catch (Exception e) {
-			System.out.print(e.getMessage());
+
 		}
 	}
 

@@ -8,14 +8,14 @@
 		<listener class-name="reportConfig.ReportNGListener" />
 		<listener class-name="retryConfig.RetryListener" />
 	</listeners>
-	<parameter name="urlBankGuru" value="http://demo.guru99.com/v4/" />
+	<!--<parameter name="environment" value="testing" />-->
 	<test name="Run on Firefox">
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="com.bankguru.common.Login_01_Register_And_Login" />
 			<class name="com.bankguru.common.Login_02_Create_New_Customer" />
-			<!--<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
-			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<!--<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
 			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
 			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
 			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />-->
@@ -33,9 +33,10 @@
 	<test name="Run on Chrome">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.common.Login_01_Register_And_Login" />
+			<class name="com.bankguru.common.Login_02_Create_New_Customer" />
 			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
-			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<!--<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
 			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
 			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
 			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />-->

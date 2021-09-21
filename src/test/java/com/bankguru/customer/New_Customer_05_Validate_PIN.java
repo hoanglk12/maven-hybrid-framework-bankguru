@@ -1,5 +1,6 @@
 package com.bankguru.customer;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -11,6 +12,7 @@ import com.bankguru.common.Login_01_Register_And_Login;
 import com.data.bankguru.Customer.New_Customer_05;
 
 import commons.BaseTest;
+import environmentConfig.Environment;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.NewCustomerPageObject;
@@ -18,10 +20,14 @@ import pageObjects.bankGuru.PageGeneratorManager;
 
 public class New_Customer_05_Validate_PIN extends BaseTest {
 	WebDriver driver;
-	@Parameters({"browser","urlBankGuru"})
+	Environment environment;
+	@Parameters({"browser"})
 	@BeforeClass
-	public void initBrowser(String browser, String urlBankGuru) {
-		driver = getBrowser(browser, urlBankGuru);
+	public void initBrowser(String browser) {
+		String environmentName = System.getProperty("envMaven");
+		ConfigFactory.setProperty("env", environmentName);
+		environment = ConfigFactory.create(Environment.class);
+		driver = getBrowser(browser, environment.appUrl());
 		newCustomerData05 = New_Customer_05.getNewCustomer05();
 		
 		loginPage = PageGeneratorManager.getLoginPage(driver);
@@ -49,7 +55,6 @@ public class New_Customer_05_Validate_PIN extends BaseTest {
 		verifyEquals(newCustomerPage.getErrorValidationMessageByField("PIN"), newCustomerData05.ERROR_MSG_PIN_NUMERIC);
 
 	}
-	
 	@Test
 	public void  New_Customer_05_Validate_PIN_17_Not_Empty() {
 		log.info("New_Customer_05_Validate_PIN_17 - Step 1 - Refresh New Customer Page");
