@@ -122,9 +122,9 @@ public class New_Customer_05_Validate_PIN extends BaseTest {
 		closeBrowserAndDriver();
 	}
 	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public NewCustomerPageObject newCustomerPage;
+	HomePageObject homePage;
+	LoginPageObject loginPage;
+	NewCustomerPageObject newCustomerPage;
 	New_Customer_05 newCustomerData05;
 
 }

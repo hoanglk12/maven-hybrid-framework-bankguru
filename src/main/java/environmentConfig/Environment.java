@@ -13,6 +13,4 @@ public interface Environment extends Config {
 	
 	@Key("app.pass")
 	String appPassword();
-	
-	
 }

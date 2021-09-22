@@ -691,6 +691,10 @@ public class BasePage {
 	public String getTextValueByRowName(WebDriver driver, String rowName) {
 		return getTextElement(driver, BankGuruBasePageUI.DYNAMIC_VALUE_BY_ROW_NAME, rowName);
 	}
+	public String getTextHeaderPage(WebDriver driver) {
+		return getTextElement(driver, BankGuruBasePageUI.HEADER_TEXT_PAGE);
+	}
+
 	private Alert alert;
 	private WebDriverWait explicitWait; 
 	private long timeOut = 30;

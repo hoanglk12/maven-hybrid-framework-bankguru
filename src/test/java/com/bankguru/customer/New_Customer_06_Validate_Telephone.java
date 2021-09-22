@@ -98,9 +98,9 @@ public class New_Customer_06_Validate_Telephone extends BaseTest {
 		closeBrowserAndDriver();
 	}
 	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public NewCustomerPageObject newCustomerPage;
+	HomePageObject homePage;
+	LoginPageObject loginPage;
+	NewCustomerPageObject newCustomerPage;
 	New_Customer_06 newCustomerData06;
 
 }

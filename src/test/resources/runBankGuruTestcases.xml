@@ -18,8 +18,9 @@
 			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
 			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
 			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
-			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />-->
-			<class name="com.bankguru.customer.New_Customer_06_Validate_Telephone" />
+			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />
+			<class name="com.bankguru.customer.New_Customer_06_Validate_Telephone" />-->
+			<class name="com.bankguru.customer.Edit_Customer_01_Verify_CustomerId" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

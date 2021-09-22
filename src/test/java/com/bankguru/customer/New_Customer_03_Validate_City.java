@@ -17,7 +17,6 @@ import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.NewCustomerPageObject;
 import pageObjects.bankGuru.PageGeneratorManager;
-import pageObjects.bankGuru.RegisterPageObject;
 
 public class New_Customer_03_Validate_City extends BaseTest {
 	WebDriver driver;
@@ -102,10 +101,9 @@ public class New_Customer_03_Validate_City extends BaseTest {
 		closeBrowserAndDriver();
 	}
 	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public RegisterPageObject registerPage;
-	public NewCustomerPageObject newCustomerPage;
+	HomePageObject homePage;
+	LoginPageObject loginPage;
+	NewCustomerPageObject newCustomerPage;
 	New_Customer_03 newCustomerData03;
 
 }

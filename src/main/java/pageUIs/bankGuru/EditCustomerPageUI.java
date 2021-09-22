@@ -1,5 +1,7 @@
 package pageUIs.bankGuru;
 
 public class EditCustomerPageUI {
-	
+	public static final String ERROR_MESSAGE_VALIDATION = "//label[@id='message']";
+	public static final String DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD = "//td[text()='%s']/following-sibling::td/label";
+
 }

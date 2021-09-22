@@ -101,10 +101,10 @@ public class New_Customer_01_Validate_Name extends BaseTest {
 		closeBrowserAndDriver();
 	}
 	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public RegisterPageObject registerPage;
-	public NewCustomerPageObject newCustomerPage;
+	HomePageObject homePage;
+	LoginPageObject loginPage;
+	RegisterPageObject registerPage;
+	NewCustomerPageObject newCustomerPage;
 	New_Customer_01 newCustomerData01;
 
 }

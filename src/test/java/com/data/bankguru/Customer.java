@@ -1,5 +1,7 @@
 package com.data.bankguru;
 
+import com.bankguru.common.Login_02_Create_New_Customer;
+
 import utilities.DataHelper;
 
 public class Customer {
@@ -115,22 +117,41 @@ public class Customer {
     	public String ERROR_MSG_PIN_SPACE = "First character can not have space";
     }
     public static class New_Customer_06 {
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static New_Customer_06 getNewCustomer06() {
+    		return new New_Customer_06();
+    	}
+    	
+    	
+    	public String PHONE_BLANK = "";
+    	public String PHONE_FIRST_CHAR_BLANK = " " + customer.dataHelper.getRandomNumber();
+    	public String PHONE_SPACE = customer.dataHelper.getRandomNumber() + " " + customer.dataHelper.getRandomNumber();
+    	public String PHONE_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+    	
+    	public String ERROR_MSG_PHONE_BLANK = "Mobile no must not be blank";
+    	public String ERROR_MSG_PHONE_FIRST_CHAR_BLANK = "First character can not have space";
+    	public String ERROR_MSG_PHONE_SPACE = "Characters are not allowed";
+    	public String ERROR_MSG_PHONE_SPECIAL_CHAR = "Special characters are not allowed";
+    	
+    }
+    public static class Edit_Customer_01 {
         Customer customer = Customer.getCustomer();
 
-        public static New_Customer_06 getNewCustomer06() {
-            return new New_Customer_06();
+        public static Edit_Customer_01 getEditCustomer01() {
+            return new Edit_Customer_01();
         }
 
        
-        public String PHONE_BLANK = "";
-        public String PHONE_FIRST_CHAR_BLANK = " " + customer.dataHelper.getRandomNumber();
-        public String PHONE_SPACE = customer.dataHelper.getRandomNumber() + " " + customer.dataHelper.getRandomNumber();;
-        public String PHONE_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+        public String CUSTOMER_ID_BLANK = "";
+        public String CUSTOMER_ID_NUMERIC = "aac" + customer.dataHelper.getRandomNumber();
+        public String CUSTOMER_ID_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+        public String CUSTOMER_ID_VALID = Login_02_Create_New_Customer.customerID;
       
-        public String ERROR_MSG_PHONE_BLANK = "Mobile no must not be blank";
-        public String ERROR_MSG_PHONE_FIRST_CHAR_BLANK = "First character can not have space";
-        public String ERROR_MSG_PHONE_SPACE = "Characters are not allowed";
-        public String ERROR_MSG_PHONE_SPECIAL_CHAR = "Special characters are not allowed";
+        public String ERROR_MSG_CUSTOMER_ID_BLANK = "Customer ID is required";
+        public String ERROR_MSG_CUSTOMER_ID_NUMERIC = "Characters are not allowed";
+        public String ERROR_MSG_CUSTOMER_ID_SPECIAL_CHAR = "Special characters are not allowed";
+        public String HEADER_TEXT_EDIT_CUSTOMER_PAGE = "Edit Customer";
         
     }
 
