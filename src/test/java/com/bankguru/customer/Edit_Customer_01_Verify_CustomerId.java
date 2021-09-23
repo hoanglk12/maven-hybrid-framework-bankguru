@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.bankguru.common.Login_01_Register_And_Login;
+import com.data.bankguru.Customer.Common;
 import com.data.bankguru.Customer.Edit_Customer_01;
 
 import commons.BaseTest;
@@ -85,8 +86,8 @@ public class Edit_Customer_01_Verify_CustomerId extends BaseTest {
 		log.info("Edit_Customer_01_Verify_CustomerId_04 - Step 1 - Refresh New Customer Page");
 		editCustomerPage.refreshCurrentPage(driver);
 		
-		log.info("Edit_Customer_01_Verify_CustomerId_04 - Step 2 - Enter to Customer Name textbox with data '" + editCustomerData01.CUSTOMER_ID_VALID + "'");
-		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, editCustomerData01.CUSTOMER_ID_VALID, "Customer ID", "input", "cusid");
+		log.info("Edit_Customer_01_Verify_CustomerId_04 - Step 2 - Enter to Customer Name textbox with data '" + Common.getCommon().CUSTOMER_ID_VALID + "'");
+		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, Common.getCommon().CUSTOMER_ID_VALID, "Customer ID", "input", "cusid");
 		
 		log.info("Edit_Customer_01_Verify_CustomerId_04 - Step 3 - Click to Submit button");
 		editCustomerPage.clickToButtonByNameAttribute(driver, "AccSubmit");
@@ -107,5 +108,5 @@ public class Edit_Customer_01_Verify_CustomerId extends BaseTest {
 	private LoginPageObject loginPage;
 	private EditCustomerPageObject editCustomerPage;
 	Edit_Customer_01 editCustomerData01;
-
+	
 }

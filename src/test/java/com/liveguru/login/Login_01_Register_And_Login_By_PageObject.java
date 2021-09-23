@@ -1,6 +1,5 @@
 package com.liveguru.login;
 
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,22 +8,20 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import environmentConfig.Environment;
 import pageObjects.liveGuru.HomePageObject;
 import pageObjects.liveGuru.LoginPageObject;
 import pageObjects.liveGuru.MyDashboardPageObject;
 
 public class Login_01_Register_And_Login_By_PageObject extends BaseTest {
 	WebDriver driver;
-	Environment environment;
 	String email, firstName, lastName, password, confirmPassword;
 	
-	@Parameters({"browser"})
+	@Parameters({"browser","url"})
 	@BeforeClass
 	public void initBrowser(String browserName, String appUrl) {
-		environment = ConfigFactory.create(Environment.class);
-		driver = getBrowser(browserName, environment.appUrl());
-		System.out.println(environment.appUrl());
+		
+		driver = getBrowser(browserName, appUrl);
+		
 		email = generateEmail();
 	}
 

@@ -63,7 +63,7 @@ public class New_Customer_02_Validate_Address extends BaseTest {
 		log.info("New_Customer_02_Validate_Address_06 - Step 1 - Refresh New Customer Page");
 		newCustomerPage.refreshCurrentPage(driver);
 		
-		log.info("New_Customer_02_Validate_Address_06 - Step 2 - Enter to Customer Name textbox with data '" + newCustomerData02.ADDRESS_FIRST_CHAR_BLANK + "'");
+		log.info("New_Customer_02_Validate_Address_06 - Step 2 - Enter to Address textarea with data '" + newCustomerData02.ADDRESS_FIRST_CHAR_BLANK + "'");
 		newCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, newCustomerData02.ADDRESS_FIRST_CHAR_BLANK, "Address", "textarea", "addr");
 		
 		log.info("New_Customer_02_Validate_Address_06 - Step 3 - Verify error message is displayed with content '" + newCustomerData02.ERROR_MSG_ADDRESS_FIRST_CHAR_BLANK + "'");

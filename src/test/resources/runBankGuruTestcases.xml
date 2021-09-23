@@ -21,6 +21,7 @@
 			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />
 			<class name="com.bankguru.customer.New_Customer_06_Validate_Telephone" />-->
 			<class name="com.bankguru.customer.Edit_Customer_01_Verify_CustomerId" />
+			<class name="com.bankguru.customer.Edit_Customer_02_Verify_Address" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

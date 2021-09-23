@@ -4,7 +4,7 @@
 	<test name="Run on Firefox">
 	<parameter name="browser" value="firefox"/>
 		<classes>
-			<!--<class name="com.liveguru.login.Login_01_Register_And_Login_By_PageObject" />-->
+			<class name="com.liveguru.login.Login_01_Register_And_Login_By_PageObject" />
 			<class name="com.database.testing.Database_Product" />
 		</classes>
 	</test> 

@@ -6,7 +6,7 @@ import utilities.DataHelper;
 
 public class Customer {
     private DataHelper dataHelper;
-
+   
     public static Customer getCustomer() {
         return new Customer();
     }
@@ -17,10 +17,11 @@ public class Customer {
     
     public static class Common{
     	Customer customer = Customer.getCustomer();
-
+    	
         public static Common getCommon() {
             return new Common();
         }
+        public String CUSTOMER_ID_VALID = Login_02_Create_New_Customer.customerID;
         public String NEW_CUSTOMER_NAME = customer.dataHelper.getFirstName();
         public String NEW_CUSTOMER_DATE_OF_BIRTH = customer.dataHelper.getBirthday();
         public String NEW_CUSTOMER_ADDRESS = customer.dataHelper.getStreetAddress();
@@ -136,22 +137,33 @@ public class Customer {
     	
     }
     public static class Edit_Customer_01 {
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_01 getEditCustomer01() {
+    		return new Edit_Customer_01();
+    	}
+    	
+    	
+    	public String CUSTOMER_ID_BLANK = "";
+    	public String CUSTOMER_ID_NUMERIC = "aac" + customer.dataHelper.getRandomNumber();
+    	public String CUSTOMER_ID_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+    	
+    	
+    	public String ERROR_MSG_CUSTOMER_ID_BLANK = "Customer ID is required";
+    	public String ERROR_MSG_CUSTOMER_ID_NUMERIC = "Characters are not allowed";
+    	public String ERROR_MSG_CUSTOMER_ID_SPECIAL_CHAR = "Special characters are not allowed";
+    	public String HEADER_TEXT_EDIT_CUSTOMER_PAGE = "Edit Customer";
+    	
+    }
+    public static class Edit_Customer_02 {
         Customer customer = Customer.getCustomer();
 
-        public static Edit_Customer_01 getEditCustomer01() {
-            return new Edit_Customer_01();
+        public static Edit_Customer_02 getEditCustomer02() {
+            return new Edit_Customer_02();
         }
 
-       
-        public String CUSTOMER_ID_BLANK = "";
-        public String CUSTOMER_ID_NUMERIC = "aac" + customer.dataHelper.getRandomNumber();
-        public String CUSTOMER_ID_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
-        public String CUSTOMER_ID_VALID = Login_02_Create_New_Customer.customerID;
-      
-        public String ERROR_MSG_CUSTOMER_ID_BLANK = "Customer ID is required";
-        public String ERROR_MSG_CUSTOMER_ID_NUMERIC = "Characters are not allowed";
-        public String ERROR_MSG_CUSTOMER_ID_SPECIAL_CHAR = "Special characters are not allowed";
-        public String HEADER_TEXT_EDIT_CUSTOMER_PAGE = "Edit Customer";
+        public String ADDRESS_BLANK = "";
+        public String ERROR_MSG_ADDRESS_BLANK = "Address Field must not be blank";
         
     }
 
