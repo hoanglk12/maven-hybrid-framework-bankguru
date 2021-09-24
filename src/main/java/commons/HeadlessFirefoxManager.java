@@ -17,4 +17,10 @@ public class HeadlessFirefoxManager extends DriverManager{
 		
 	}
 
+	@Override
+	protected void closeBrowserAndDriver() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

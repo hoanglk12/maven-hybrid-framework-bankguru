@@ -94,13 +94,11 @@ public class Login_01_Register_And_Login_By_PageObject extends BaseTest {
 		Assert.assertTrue(myDashboardPage.isMyDashboardHeaderDisplayed());
 
 	}
-
-	@AfterClass
-	public void closeBrowser() {
-		driver.quit();
+	@Parameters("browser")
+	@AfterClass(alwaysRun = true)
+	public void closeBrowser(String browserName) {
+		driverManager.quitDriver();
 	}
-
-
 
 	HomePageObject homePage;
 	LoginPageObject loginPage;

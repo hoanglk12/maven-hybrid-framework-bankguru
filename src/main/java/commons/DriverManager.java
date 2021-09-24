@@ -6,16 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 public abstract class DriverManager {
 	protected WebDriver driver;
-
 	protected abstract void createDriver();
-
+	protected abstract void closeBrowserAndDriver();
 	public void quitDriver() {
-		if (driver != null) {
-			driver.quit();
-			driver = null;
-		}
+		closeBrowserAndDriver();
 	}
-
 	public WebDriver getDriver(String appUrl) {
 		if (driver == null) {
 			createDriver();

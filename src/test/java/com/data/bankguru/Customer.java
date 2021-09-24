@@ -176,6 +176,9 @@ public class Customer {
         public String EDIT_CITY_BLANK = "";
         public String EDIT_CITY_NUMERIC = customer.dataHelper.getCity() + String.valueOf(customer.dataHelper.getRandomNumber());
         public String EDIT_CITY_SPECIAL_CHAR = customer.dataHelper.getCity() + "%$#";
+        public String ERROR_MSG_EDIT_CITY_BLANK = "City Field must not be blank";
+    	public String ERROR_MSG_EDIT_CITY_NUMERIC = "Numbers are not allowed";
+    	public String ERROR_MSG_EDIT_CITY_SPECIAL_CHAR = "Special characters are not allowed";
         
     }
 

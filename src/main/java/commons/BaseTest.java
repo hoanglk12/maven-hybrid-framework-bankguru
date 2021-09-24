@@ -93,7 +93,7 @@ public class BaseTest {
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		
+
 		return driver;
 	}
 
@@ -149,6 +149,7 @@ public class BaseTest {
 		driver.get(appUrl);
 		return driver;
 	}
+
 	protected WebDriver getBrowser(String browserName, String appUrl, Platform platform, String ipAddress, String portNumber) {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 		DesiredCapabilities capability = null;
@@ -315,7 +316,7 @@ public class BaseTest {
 			} else if (driver.toString().contains("edge")) {
 				if (osName.contains("windows")) {
 					cmd = "taskkill /F /FI \"IMAGENAME eq msedgedriver*\"";
-				} else if (osName.contains("windows")) {
+				} else {
 					cmd = "pkill msedgedriver";
 				}
 			} else if (driver.toString().contains("internetexplorer")) {
@@ -365,6 +366,7 @@ public class BaseTest {
 			});
 		}
 	}
+
 	public WebDriver getDriver() {
 		return this.driver;
 	}

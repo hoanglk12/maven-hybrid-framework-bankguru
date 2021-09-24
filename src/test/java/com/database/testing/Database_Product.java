@@ -17,7 +17,6 @@ import pageObjects.liveGuru.MyDashboardPageObject;
 public class Database_Product extends BaseTest {
 	WebDriver driver;
 	private DriverManager driverManager;
-	String email, firstName, lastName, password, confirmPassword;
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
@@ -41,10 +40,10 @@ public class Database_Product extends BaseTest {
 	}
 
 	
-
-	@AfterClass
-	public void closeBrowser() {
-		driver.quit();
+	@Parameters("browser")
+	@AfterClass(alwaysRun = true)
+	public void closeBrowser(String browserName) {
+		driverManager.quitDriver();
 	}
 
 

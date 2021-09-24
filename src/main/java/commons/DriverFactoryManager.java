@@ -11,7 +11,6 @@ public class DriverFactoryManager {
 		BROWSER browser = BROWSER.valueOf(browserName.toUpperCase());
 		if (browser == BROWSER.FIREFOX) {
 			driverManager = new FirefoxDriverManager();
-			System.out.println("driverManager: " + driverManager.toString());
 		} else if (browser == BROWSER.CHROME) {
 			driverManager = new ChromeDriverManager();
 		} else if (browser == BROWSER.EDGE_CHROMIUM) {

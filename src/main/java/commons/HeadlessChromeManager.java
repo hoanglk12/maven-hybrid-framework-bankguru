@@ -17,4 +17,10 @@ public class HeadlessChromeManager extends DriverManager{
 		
 	}
 
+	@Override
+	protected void closeBrowserAndDriver() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

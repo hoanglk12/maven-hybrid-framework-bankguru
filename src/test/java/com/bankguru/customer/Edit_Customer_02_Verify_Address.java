@@ -38,7 +38,7 @@ public class Edit_Customer_02_Verify_Address extends BaseTest {
 		
 	}
 	@Test
-	public void  Edit_Customer_02_Verify_Address_01_Not_Empty() {
+	public void  Edit_Customer_02_Verify_Address_05_Not_Empty() {
 		log.info("Edit_Customer_02_Verify_Address_01 - Step 1 - Verify Welcome message is displayed at Home Page");
 		homePage = PageGeneratorManager.getHomePage(driver);
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
