@@ -8,20 +8,23 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.DriverFactoryManager;
+import commons.DriverManager;
 import pageObjects.liveGuru.HomePageObject;
 import pageObjects.liveGuru.LoginPageObject;
 import pageObjects.liveGuru.MyDashboardPageObject;
 
 public class Database_Product extends BaseTest {
 	WebDriver driver;
-	
+	private DriverManager driverManager;
 	String email, firstName, lastName, password, confirmPassword;
 	
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void initBrowser(String browserName, String appUrl) {
 		
-		driver = getBrowser(browserName, appUrl);
+		driverManager = DriverFactoryManager.getBrowser(browserName);
+		driver = driverManager.getDriver(appUrl);
 		homePage = new HomePageObject(driver);
 		Assert.assertTrue(homePage.isLogoPageDisplayed());
 		homePage.clickToMyAccountLinkAtFooter();

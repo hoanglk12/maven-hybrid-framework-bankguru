@@ -156,14 +156,26 @@ public class Customer {
     	
     }
     public static class Edit_Customer_02 {
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_02 getEditCustomer02() {
+    		return new Edit_Customer_02();
+    	}
+    	
+    	public String EDIT_ADDRESS_BLANK = "";
+    	public String ERROR_MSG_EDIT_ADDRESS_BLANK = "Address Field must not be blank";
+    	
+    }
+    public static class Edit_Customer_03 {
         Customer customer = Customer.getCustomer();
 
-        public static Edit_Customer_02 getEditCustomer02() {
-            return new Edit_Customer_02();
+        public static Edit_Customer_03 getEditCustomer03() {
+            return new Edit_Customer_03();
         }
 
-        public String ADDRESS_BLANK = "";
-        public String ERROR_MSG_ADDRESS_BLANK = "Address Field must not be blank";
+        public String EDIT_CITY_BLANK = "";
+        public String EDIT_CITY_NUMERIC = customer.dataHelper.getCity() + String.valueOf(customer.dataHelper.getRandomNumber());
+        public String EDIT_CITY_SPECIAL_CHAR = customer.dataHelper.getCity() + "%$#";
         
     }
 

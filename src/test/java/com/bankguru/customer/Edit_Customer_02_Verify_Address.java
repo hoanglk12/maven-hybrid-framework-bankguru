@@ -54,14 +54,14 @@ public class Edit_Customer_02_Verify_Address extends BaseTest {
 		log.info("Edit_Customer_02_Verify_Address_01 - Step 4 - Click to Submit button");
 		editCustomerPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Edit_Customer_02_Verify_Address_01 - Step 5 - Enter to Address textarea with data '" + editCustomerData02.ADDRESS_BLANK + "'");
-		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, editCustomerData02.ADDRESS_BLANK, "Address", "textarea", "addr");
+		log.info("Edit_Customer_02_Verify_Address_01 - Step 5 - Enter to Address textarea with data '" + editCustomerData02.EDIT_ADDRESS_BLANK + "'");
+		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, editCustomerData02.EDIT_ADDRESS_BLANK, "Address", "textarea", "addr");
 		
 		log.info("Edit_Customer_02_Verify_Address_01 - Step 6 - Press Tab to move to next field");
 		editCustomerPage.pressKeyboardToElementByTextTagAndName(driver, Keys.TAB, "Address", "textarea", "addr");
 		
-		log.info("Edit_Customer_02_Verify_Address_01 - Step 7 - Verify error message is displayed with content '" + editCustomerData02.ERROR_MSG_ADDRESS_BLANK + "'");
-		verifyEquals(editCustomerPage.getErrorValidationMessageByField("Address"), editCustomerData02.ERROR_MSG_ADDRESS_BLANK);
+		log.info("Edit_Customer_02_Verify_Address_01 - Step 7 - Verify error message is displayed with content '" + editCustomerData02.ERROR_MSG_EDIT_ADDRESS_BLANK + "'");
+		verifyEquals(editCustomerPage.getErrorValidationMessageByField("Address"), editCustomerData02.ERROR_MSG_EDIT_ADDRESS_BLANK);
 		
 	}
 	

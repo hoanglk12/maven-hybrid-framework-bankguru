@@ -8,6 +8,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
+import commons.DriverFactoryManager;
+import commons.DriverManager;
 import pageObjects.liveGuru.HomePageObject;
 import pageObjects.liveGuru.LoginPageObject;
 import pageObjects.liveGuru.MyDashboardPageObject;
@@ -15,13 +17,13 @@ import pageObjects.liveGuru.MyDashboardPageObject;
 public class Login_01_Register_And_Login_By_PageObject extends BaseTest {
 	WebDriver driver;
 	String email, firstName, lastName, password, confirmPassword;
-	
+	private DriverManager driverManager;
 	@Parameters({"browser","url"})
 	@BeforeClass
 	public void initBrowser(String browserName, String appUrl) {
 		
-		driver = getBrowser(browserName, appUrl);
-		
+		driverManager = DriverFactoryManager.getBrowser(browserName);
+		driver = driverManager.getDriver(appUrl);
 		email = generateEmail();
 	}
 
