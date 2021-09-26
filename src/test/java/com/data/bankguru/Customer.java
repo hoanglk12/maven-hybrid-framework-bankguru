@@ -167,18 +167,33 @@ public class Customer {
     	
     }
     public static class Edit_Customer_03 {
-        Customer customer = Customer.getCustomer();
-
-        public static Edit_Customer_03 getEditCustomer03() {
-            return new Edit_Customer_03();
-        }
-
-        public String EDIT_CITY_BLANK = "";
-        public String EDIT_CITY_NUMERIC = customer.dataHelper.getCity() + String.valueOf(customer.dataHelper.getRandomNumber());
-        public String EDIT_CITY_SPECIAL_CHAR = customer.dataHelper.getCity() + "%$#";
-        public String ERROR_MSG_EDIT_CITY_BLANK = "City Field must not be blank";
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_03 getEditCustomer03() {
+    		return new Edit_Customer_03();
+    	}
+    	
+    	public String EDIT_CITY_BLANK = "";
+    	public String EDIT_CITY_NUMERIC = customer.dataHelper.getCity() + String.valueOf(customer.dataHelper.getRandomNumber());
+    	public String EDIT_CITY_SPECIAL_CHAR = customer.dataHelper.getCity() + "%$#";
+    	public String ERROR_MSG_EDIT_CITY_BLANK = "City Field must not be blank";
     	public String ERROR_MSG_EDIT_CITY_NUMERIC = "Numbers are not allowed";
     	public String ERROR_MSG_EDIT_CITY_SPECIAL_CHAR = "Special characters are not allowed";
+    	
+    }
+    public static class Edit_Customer_04 {
+        Customer customer = Customer.getCustomer();
+
+        public static Edit_Customer_04 getEditCustomer04() {
+            return new Edit_Customer_04();
+        }
+
+        public String EDIT_STATE_BLANK = "";
+        public String EDIT_STATE_NUMERIC =  customer.dataHelper.getState() + String.valueOf(customer.dataHelper.getRandomNumber());
+        public String EDIT_STATE_SPECIAL_CHAR = customer.dataHelper.getState() + "%$#";
+        public String ERROR_MSG_EDIT_STATE_BLANK = "State must not be blank";
+    	public String ERROR_MSG_EDIT_STATE_NUMERIC = "Numbers are not allowed";
+    	public String ERROR_MSG_EDIT_STATE_SPECIAL_CHAR = "Special characters are not allowed";
         
     }
 

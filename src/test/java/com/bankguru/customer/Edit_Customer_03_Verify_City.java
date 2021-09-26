@@ -38,7 +38,7 @@ public class Edit_Customer_03_Verify_City extends BaseTest {
 		
 	}
 	@Test
-	public void  Edit_Customer_03_Verify_City_06_Not_Empty() {
+	public void Edit_Customer_03_Verify_City_06_Not_Empty() {
 		log.info("Edit_Customer_03_Verify_City_06 - Step 1 - Verify Welcome message is displayed at Home Page");
 		homePage = PageGeneratorManager.getHomePage(driver);
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
@@ -60,7 +60,7 @@ public class Edit_Customer_03_Verify_City extends BaseTest {
 		log.info("Edit_Customer_03_Verify_City_06 - Step 6 - Press Tab to move to next field");
 		editCustomerPage.pressKeyboardToElementByTextTagAndName(driver, Keys.TAB, "City", "input", "city");
 		
-		log.info("Edit_Customer_02_Verify_Address_01 - Step 7 - Verify error message is displayed with content '" + editCustomerData03.ERROR_MSG_EDIT_CITY_BLANK + "'");
+		log.info("Edit_Customer_03_Verify_City_06 - Step 7 - Verify error message is displayed with content '" + editCustomerData03.ERROR_MSG_EDIT_CITY_BLANK + "'");
 		verifyEquals(editCustomerPage.getErrorValidationMessageByField("City"), editCustomerData03.ERROR_MSG_EDIT_CITY_BLANK);
 	}
 	@Test

@@ -23,6 +23,7 @@
 			<class name="com.bankguru.customer.Edit_Customer_01_Verify_CustomerId" />
 			<class name="com.bankguru.customer.Edit_Customer_02_Verify_Address" />
 			<class name="com.bankguru.customer.Edit_Customer_03_Verify_City" />
+			<class name="com.bankguru.customer.Edit_Customer_04_Verify_State" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">
