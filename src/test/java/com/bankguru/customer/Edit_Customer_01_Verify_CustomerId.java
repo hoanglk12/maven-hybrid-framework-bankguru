@@ -107,6 +107,6 @@ public class Edit_Customer_01_Verify_CustomerId extends BaseTest {
 	private HomePageObject homePage;
 	private LoginPageObject loginPage;
 	private EditCustomerPageObject editCustomerPage;
-	Edit_Customer_01 editCustomerData01;
+	private Edit_Customer_01 editCustomerData01;
 	
 }

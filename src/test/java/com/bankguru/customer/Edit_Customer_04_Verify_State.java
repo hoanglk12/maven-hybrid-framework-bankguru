@@ -48,7 +48,7 @@ public class Edit_Customer_04_Verify_State extends BaseTest {
 		homePage.clickToLinkText(driver, "Edit Customer");
 		editCustomerPage = PageGeneratorManager.getEditCustomerPage(driver);
 		
-		log.info("Edit_Customer_04_Verify_State_09 - Step 3 - Enter to Address Textbox with data '" + Common.getCommon().CUSTOMER_ID_VALID);
+		log.info("Edit_Customer_04_Verify_State_09 - Step 3 - Enter to Customer ID Textbox with data '" + Common.getCommon().CUSTOMER_ID_VALID);
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, Common.getCommon().CUSTOMER_ID_VALID, "Customer ID", "input", "cusid");
 		
 		log.info("Edit_Customer_04_Verify_State_09 - Step 4 - Click to Submit button");
@@ -90,6 +90,6 @@ public class Edit_Customer_04_Verify_State extends BaseTest {
 	private HomePageObject homePage;
 	private LoginPageObject loginPage;
 	private EditCustomerPageObject editCustomerPage;
-	Edit_Customer_04 editCustomerData04;
+	private Edit_Customer_04 editCustomerData04;
 
 }
