@@ -25,6 +25,7 @@
 			<class name="com.bankguru.customer.Edit_Customer_03_Verify_City" />
 			<class name="com.bankguru.customer.Edit_Customer_04_Verify_State" />
 			<class name="com.bankguru.customer.Edit_Customer_05_Verify_PIN" />
+			<class name="com.bankguru.customer.Edit_Customer_06_Verify_Telephone" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

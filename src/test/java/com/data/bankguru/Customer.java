@@ -197,20 +197,33 @@ public class Customer {
     	
     }
     public static class Edit_Customer_05 {
-        Customer customer = Customer.getCustomer();
-
-        public static Edit_Customer_05 getEditCustomer05() {
-            return new Edit_Customer_05();
-        }
-
-        public String EDIT_PIN_BLANK = "";
-        public String EDIT_PIN_NUMERIC = customer.dataHelper.getRandomNumber() + "PIN";
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_05 getEditCustomer05() {
+    		return new Edit_Customer_05();
+    	}
+    	
+    	public String EDIT_PIN_BLANK = "";
+    	public String EDIT_PIN_NUMERIC = customer.dataHelper.getRandomNumber() + "PIN";
     	public String EDIT_PIN_LESS_SIX_DIGITS = String.valueOf(customer.dataHelper.getRandomNumber());
     	public String EDIT_PIN_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
     	public String ERROR_MSG_EDIT_PIN_BLANK = "PIN Code must not be blank";
     	public String ERROR_MSG_EDIT_PIN_NUMERIC = "Characters are not allowed";
     	public String ERROR_MSG_EDIT_PIN_NOT_SIX_DIGITS = "PIN Code must have 6 Digits";
     	public String ERROR_MSG_EDIT_PIN_SPECIAL_CHAR = "Special characters are not allowed";
+    	
+    }
+    public static class Edit_Customer_06 {
+        Customer customer = Customer.getCustomer();
+
+        public static Edit_Customer_06 getEditCustomer06() {
+            return new Edit_Customer_06();
+        }
+
+        public String EDIT_PHONE_BLANK = "";
+    	public String EDIT_PHONE_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
+    	public String ERROR_MSG_EDIT_PHONE_BLANK = "Mobile no must not be blank";
+    	public String ERROR_MSG_EDIT_PHONE_SPECIAL_CHAR = "Special characters are not allowed";
         
     }
 
