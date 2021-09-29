@@ -61,4 +61,7 @@ public class DataHelper {
 	public String getPIN(){
 		return faker.address().zipCode();
 	}
+	public String getRandomString() {
+		return faker.regexify("[A-Za-z0-9]{10}");
+	}
 }

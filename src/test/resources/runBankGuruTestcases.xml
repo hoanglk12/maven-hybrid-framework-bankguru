@@ -14,18 +14,19 @@
 		<classes>
 			<class name="com.bankguru.common.Login_01_Register_And_Login" />
 			<class name="com.bankguru.common.Login_02_Create_New_Customer" />
-			<!--<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
 			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
 			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
 			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
 			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />
-			<class name="com.bankguru.customer.New_Customer_06_Validate_Telephone" />-->
+			<class name="com.bankguru.customer.New_Customer_06_Validate_Telephone" />
 			<class name="com.bankguru.customer.Edit_Customer_01_Verify_CustomerId" />
 			<class name="com.bankguru.customer.Edit_Customer_02_Verify_Address" />
 			<class name="com.bankguru.customer.Edit_Customer_03_Verify_City" />
 			<class name="com.bankguru.customer.Edit_Customer_04_Verify_State" />
 			<class name="com.bankguru.customer.Edit_Customer_05_Verify_PIN" />
 			<class name="com.bankguru.customer.Edit_Customer_06_Verify_Telephone" />
+			<class name="com.bankguru.customer.Edit_Customer_07_Verify_Email" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

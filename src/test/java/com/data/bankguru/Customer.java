@@ -214,16 +214,31 @@ public class Customer {
     	
     }
     public static class Edit_Customer_06 {
-        Customer customer = Customer.getCustomer();
-
-        public static Edit_Customer_06 getEditCustomer06() {
-            return new Edit_Customer_06();
-        }
-
-        public String EDIT_PHONE_BLANK = "";
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_06 getEditCustomer06() {
+    		return new Edit_Customer_06();
+    	}
+    	
+    	public String EDIT_PHONE_BLANK = "";
     	public String EDIT_PHONE_SPECIAL_CHAR = String.valueOf(customer.dataHelper.getRandomNumber()) + "%$#";
     	public String ERROR_MSG_EDIT_PHONE_BLANK = "Mobile no must not be blank";
     	public String ERROR_MSG_EDIT_PHONE_SPECIAL_CHAR = "Special characters are not allowed";
+    	
+    }
+    public static class Edit_Customer_07 {
+        Customer customer = Customer.getCustomer();
+
+        public static Edit_Customer_07 getEditCustomer07() {
+            return new Edit_Customer_07();
+        }
+
+        public String EDIT_EMAIL_BLANK = "";
+        public String EDIT_EMAIL_SPACE = " ";
+    	public String EDIT_EMAIL_NOT_CORRECT_FORMAT = customer.dataHelper.getRandomString();
+    	public String ERROR_MSG_EDIT_EMAIL_BLANK = "Email-ID must not be blank";
+    	public String ERROR_MSG_EDIT_EMAIL_SPACE = "First character can not have space";
+    	public String ERROR_MSG_EDIT_EMAIL_NOT_CORRECT_FORMAT = "Email-ID is not valid";
         
     }
 
