@@ -227,18 +227,32 @@ public class Customer {
     	
     }
     public static class Edit_Customer_07 {
-        Customer customer = Customer.getCustomer();
-
-        public static Edit_Customer_07 getEditCustomer07() {
-            return new Edit_Customer_07();
-        }
-
-        public String EDIT_EMAIL_BLANK = "";
-        public String EDIT_EMAIL_SPACE = " ";
+    	Customer customer = Customer.getCustomer();
+    	
+    	public static Edit_Customer_07 getEditCustomer07() {
+    		return new Edit_Customer_07();
+    	}
+    	
+    	public String EDIT_EMAIL_BLANK = "";
+    	public String EDIT_EMAIL_SPACE = " ";
     	public String EDIT_EMAIL_NOT_CORRECT_FORMAT = customer.dataHelper.getRandomString();
     	public String ERROR_MSG_EDIT_EMAIL_BLANK = "Email-ID must not be blank";
     	public String ERROR_MSG_EDIT_EMAIL_SPACE = "First character can not have space";
     	public String ERROR_MSG_EDIT_EMAIL_NOT_CORRECT_FORMAT = "Email-ID is not valid";
+    	
+    }
+    public static class Delete_Customer_Data_Page {
+        Customer customer = Customer.getCustomer();
+
+        public static Delete_Customer_Data_Page getDeleteCustomerDataPage() {
+            return new Delete_Customer_Data_Page();
+        }
+
+        public String DELETE_CUSTOMER_ID_BLANK = "";
+        	   	
+    	public String ERROR_MSG_DELETE_CUSTOMER_ID_BLANK = "Customer ID is required";
+
+    	public String HEADER_TEXT_DELETE_CUSTOMER_PAGE = "Delete Customer Form";
         
     }
 
