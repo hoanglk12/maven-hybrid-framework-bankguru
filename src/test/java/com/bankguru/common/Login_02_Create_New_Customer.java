@@ -49,6 +49,7 @@ public class Login_02_Create_New_Customer extends BaseTest {
 		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_EMAIL, "E-mail", "input", "emailid");
 		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_PASSWORD, "Password", "input", "password");
 		newCustomerPage.clickToButtonByNameAttribute(driver, "sub");
+		newCustomerPage.sleepInSecond(1);
 		customerID = newCustomerPage.getTextValueByRowName(driver, "Customer ID");
 		closeBrowserAndDriver();
 	}

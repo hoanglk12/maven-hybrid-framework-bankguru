@@ -72,6 +72,18 @@ public class Delete_Customer extends BaseTest {
 		verifyEquals(deleteCustomerPage.getErrorValidationMessageByField("Customer ID"), deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_NUMERIC);
 	}
 	
+	@Test
+	public void Delete_Customer_03_Customer_ID_Not_Special_Char() {
+		log.info("Delete_Customer_03 - Step 1 - Refresh page");
+		deleteCustomerPage.refreshCurrentPage(driver);
+		
+		log.info("Delete_Customer_03 - Step 2 - Enter to Customer ID Textbox with data '" + deleteCustomerData.DELETE_CUSTOMER_ID_SPECIAL_CHAR + "'");
+		deleteCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, deleteCustomerData.DELETE_CUSTOMER_ID_SPECIAL_CHAR, "Customer ID", "input", "cusid");
+		
+		log.info("Delete_Customer_03 - Step 3 - Verify error message is displayed with content '" + deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR + "'");
+		verifyEquals(deleteCustomerPage.getErrorValidationMessageByField("Customer ID"), deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR);
+	}
+	
 	
 	@Parameters("browser")
 	@AfterClass(alwaysRun = true)
