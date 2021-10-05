@@ -251,10 +251,14 @@ public class Customer {
         public String DELETE_CUSTOMER_ID_BLANK = "";
         public String DELETE_CUSTOMER_ID_NUMERIC = "Acc" + customer.dataHelper.getRandomNumber();
         public String DELETE_CUSTOMER_ID_SPECIAL_CHAR = "!@#" + customer.dataHelper.getRandomNumber();
+        public String DELETE_CUSTOMER_ID_SPACE = customer.dataHelper.getRandomNumber() + " " + customer.dataHelper.getRandomNumber();
+        public String DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE = " " + customer.dataHelper.getRandomNumber();
         	   	
         public String ERROR_MSG_DELETE_CUSTOMER_ID_BLANK = "Customer ID is required";
         public String ERROR_MSG_DELETE_CUSTOMER_ID_NUMERIC = "Characters are not allowed";
-    	public String ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR = "Special characters are not allowed";
+        public String ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR = "Special characters are not allowed";
+        public String ERROR_MSG_DELETE_CUSTOMER_ID_SPACE = "Characters are not allowed";
+    	public String ERROR_MSG_DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE = "First character can not have space";
 
     	public String HEADER_TEXT_DELETE_CUSTOMER_PAGE = "Delete Customer Form";
         

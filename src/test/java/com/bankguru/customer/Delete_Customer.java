@@ -83,6 +83,28 @@ public class Delete_Customer extends BaseTest {
 		log.info("Delete_Customer_03 - Step 3 - Verify error message is displayed with content '" + deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR + "'");
 		verifyEquals(deleteCustomerPage.getErrorValidationMessageByField("Customer ID"), deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPECIAL_CHAR);
 	}
+	@Test
+	public void Delete_Customer_04_Customer_ID_Not_Space() {
+		log.info("Delete_Customer_04 - Step 1 - Refresh page");
+		deleteCustomerPage.refreshCurrentPage(driver);
+		
+		log.info("Delete_Customer_04 - Step 2 - Enter to Customer ID Textbox with data '" + deleteCustomerData.DELETE_CUSTOMER_ID_SPACE + "'");
+		deleteCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, deleteCustomerData.DELETE_CUSTOMER_ID_SPACE, "Customer ID", "input", "cusid");
+		
+		log.info("Delete_Customer_04 - Step 3 - Verify error message is displayed with content '" + deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPACE + "'");
+		verifyEquals(deleteCustomerPage.getErrorValidationMessageByField("Customer ID"), deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_SPACE);
+	}
+	@Test
+	public void Delete_Customer_05_Customer_ID_First_Char_Space() {
+		log.info("Delete_Customer_05 - Step 1 - Refresh page");
+		deleteCustomerPage.refreshCurrentPage(driver);
+		
+		log.info("Delete_Customer_05 - Step 2 - Enter to Customer ID Textbox with data '" + deleteCustomerData.DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE + "'");
+		deleteCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, deleteCustomerData.DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE, "Customer ID", "input", "cusid");
+		
+		log.info("Delete_Customer_05 - Step 3 - Verify error message is displayed with content '" + deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE + "'");
+		verifyEquals(deleteCustomerPage.getErrorValidationMessageByField("Customer ID"), deleteCustomerData.ERROR_MSG_DELETE_CUSTOMER_ID_FIRST_CHAR_SPACE);
+	}
 	
 	
 	@Parameters("browser")
