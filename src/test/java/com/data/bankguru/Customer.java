@@ -16,21 +16,22 @@ public class Customer {
     }
     
     public static class Common{
-    	Customer customer = Customer.getCustomer();
+    	static Customer customer = Customer.getCustomer();
     	
         public static Common getCommon() {
             return new Common();
         }
         public String CUSTOMER_ID_VALID = Login_02_Create_New_Customer.customerID;
-        public String NEW_CUSTOMER_NAME = customer.dataHelper.getFirstName();
-        public String NEW_CUSTOMER_DATE_OF_BIRTH = customer.dataHelper.getBirthday();
-        public String NEW_CUSTOMER_ADDRESS = customer.dataHelper.getStreetAddress();
-        public String NEW_CUSTOMER_CITY = customer.dataHelper.getCity();
-        public String NEW_CUSTOMER_STATE = customer.dataHelper.getState();
-        public String NEW_CUSTOMER_PIN = customer.dataHelper.getRandomSixDigitsNumber();
-        public String NEW_CUSTOMER_PHONE = customer.dataHelper.getRandomTenDigitsNumber();
-        public String NEW_CUSTOMER_EMAIL = customer.dataHelper.getEmailAddress();
-        public String NEW_CUSTOMER_PASSWORD = customer.dataHelper.getPassword();
+        public static final String NEW_CUSTOMER_NAME = customer.dataHelper.getFirstName();
+        public static final String NEW_CUSTOMER_DATE_OF_BIRTH = customer.dataHelper.getBirthday();
+        public static final String NEW_CUSTOMER_ADDRESS = customer.dataHelper.getStreetAddress();
+        public static final String NEW_CUSTOMER_CITY = customer.dataHelper.getCity();
+        public static final String NEW_CUSTOMER_STATE = customer.dataHelper.getState();
+        public static final String NEW_CUSTOMER_PIN = customer.dataHelper.getRandomSixDigitsNumber();
+        public static final String NEW_CUSTOMER_PHONE = customer.dataHelper.getRandomTenDigitsNumber();
+        public static final String NEW_CUSTOMER_EMAIL = customer.dataHelper.getEmailAddress();
+        public static final String NEW_CUSTOMER_PASSWORD = customer.dataHelper.getPassword();
+        public static final String NEW_CUSTOMER_GENDER = "male";
     }
     public static class New_Customer_01 {
         Customer customer = Customer.getCustomer();

@@ -26,7 +26,7 @@ public class Login_02_Create_New_Customer extends BaseTest {
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
-		commonData = Common.getCommon();
+		
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		loginPage.enterToTextBoxByTextTagAndName(driver, Login_01_Register_And_Login.userID, "UserID", "input", "uid");
@@ -37,17 +37,17 @@ public class Login_02_Create_New_Customer extends BaseTest {
 		
 		homePage.clickToLinkText(driver, "New Customer");
 		newCustomerPage = PageGeneratorManager.getNewCustomerPage(driver);
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_NAME, "Customer Name", "input", "name");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_NAME, "Customer Name", "input", "name");
 		newCustomerPage.clickToGenderMale();
 		newCustomerPage.removeAttributeTagInDOM("type","Date of Birth", "input", "dob");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_DATE_OF_BIRTH, "Date of Birth", "input", "dob");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_ADDRESS, "Address", "textarea", "addr");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_CITY, "City", "input", "city");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_STATE, "State", "input", "state");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_PIN, "PIN", "input", "pinno");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_PHONE, "Mobile Number", "input", "telephoneno");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_EMAIL, "E-mail", "input", "emailid");
-		newCustomerPage.enterToTextBoxByTextTagAndName(driver, commonData.NEW_CUSTOMER_PASSWORD, "Password", "input", "password");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_DATE_OF_BIRTH, "Date of Birth", "input", "dob");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_ADDRESS, "Address", "textarea", "addr");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_CITY, "City", "input", "city");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_STATE, "State", "input", "state");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_PIN, "PIN", "input", "pinno");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_PHONE, "Mobile Number", "input", "telephoneno");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_EMAIL, "E-mail", "input", "emailid");
+		newCustomerPage.enterToTextBoxByTextTagAndName(driver, Common.NEW_CUSTOMER_PASSWORD, "Password", "input", "password");
 		newCustomerPage.clickToButtonByNameAttribute(driver, "sub");
 		newCustomerPage.sleepInSecond(1);
 		customerID = newCustomerPage.getTextValueByRowName(driver, "Customer ID");
@@ -55,9 +55,8 @@ public class Login_02_Create_New_Customer extends BaseTest {
 	}
 
 	
+	private HomePageObject homePage;
+	private LoginPageObject loginPage;
+	private NewCustomerPageObject newCustomerPage;
 	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public NewCustomerPageObject newCustomerPage;
-	Common commonData;
 }

@@ -15,10 +15,8 @@ public class ProductSearchPageObject extends BasePage {
 	public void clickToSearchButton() {
 		waitForElementVisible(driver, ProductSearchPageUI.SEARCH_PRODUCT_BUTTON);
 		clickToElement(driver, ProductSearchPageUI.SEARCH_PRODUCT_BUTTON);
-		
 	}
 
-	
 	public void selectItemInDropdownByAttributeId(String textExpected, String idValueDropdown) {
 		waitForElementVisible(driver, ProductSearchPageUI.DYNAMIC_ADMIN_SEARCH_DROPDOWN, idValueDropdown);
 		selectItemInDropdown(driver, ProductSearchPageUI.DYNAMIC_ADMIN_SEARCH_DROPDOWN, textExpected, idValueDropdown);

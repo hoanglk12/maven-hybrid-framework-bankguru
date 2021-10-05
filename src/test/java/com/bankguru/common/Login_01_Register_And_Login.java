@@ -7,7 +7,6 @@ import org.testng.annotations.Parameters;
 
 import commons.BaseTest;
 import environmentConfig.Environment;
-import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.PageGeneratorManager;
 import pageObjects.bankGuru.RegisterPageObject;
@@ -25,12 +24,11 @@ public class Login_01_Register_And_Login extends BaseTest {
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
-	
+		email = "johnwick_" + generateEmail();
 	
 		
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		loginPageUrl = loginPage.getCurrentPageUrl(driver);
-		email = "johnwick_" + generateEmail();
 		loginPage.clickToLinkText(driver, "here");
 		registerPage = PageGeneratorManager.getRegisterPage(driver);
 		registerPage.enterToTextBoxByTextTagAndName(driver, email , "Email ID", "input", "emailid");
@@ -39,10 +37,6 @@ public class Login_01_Register_And_Login extends BaseTest {
 		password = registerPage.getTextPassword();
 		closeBrowserAndDriver();
 	}
-
-	
-	
-	public HomePageObject homePage;
-	public LoginPageObject loginPage;
-	public RegisterPageObject registerPage;
+	private LoginPageObject loginPage;
+	private RegisterPageObject registerPage;
 }

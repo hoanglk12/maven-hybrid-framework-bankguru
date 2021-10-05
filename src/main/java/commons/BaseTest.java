@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -396,6 +398,19 @@ public abstract class BaseTest {
 
 	protected String getToday() {
 		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
+	}
+	
+	protected String getFormatDateWithDash(String dateInput){
+		SimpleDateFormat fromUser = new SimpleDateFormat("MM/dd/yyyy");
+		SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd");
+		String reformattedStr = null;
+		try {
+			reformattedStr = myFormat.format(fromUser.parse(dateInput));
+			
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return reformattedStr;
 	}
 	
 	public WebDriver getDriver() {
