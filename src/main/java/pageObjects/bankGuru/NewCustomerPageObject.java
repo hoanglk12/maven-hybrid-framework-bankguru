@@ -14,6 +14,7 @@ public class NewCustomerPageObject extends BasePage {
 	}
 
 	public String getErrorValidationMessageByField(String fieldName) {
+		waitForElementVisible(driver, NewCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
 		return getTextElement(driver, NewCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
 	}
 

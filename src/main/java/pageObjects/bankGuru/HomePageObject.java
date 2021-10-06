@@ -12,6 +12,7 @@ public class HomePageObject extends BasePage {
 	}
 	
 	public String getWelcomeTextMessage() {
+		waitForElementVisible(driver, HomePageUI.WELCOME_TEXT_MESSAGE);
 		return getTextElement(driver, HomePageUI.WELCOME_TEXT_MESSAGE);
 	}
 }

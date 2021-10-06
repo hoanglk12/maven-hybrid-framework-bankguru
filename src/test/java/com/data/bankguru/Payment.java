@@ -32,7 +32,10 @@ public class Payment {
 		public static Payment_03 getPayment_03() {
 			return new Payment_03();
 		}
-	
+		public String NEW_ACCOUNT_TYPE = "Savings";
+		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
+		public String HEADER_TEXT_NEW_ACCOUNT_PAGE = "Add new account form";
+		public String SUCCESS_MSG_ADD_NEW_ACCOUNT = "Account Generated Successfully!!!";
 
 	}
 }

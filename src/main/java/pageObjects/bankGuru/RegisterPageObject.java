@@ -11,10 +11,12 @@ public class RegisterPageObject extends BasePage {
 		this.driver = driver;
 	}
 	public String getTextUserID() {
+		waitForElementVisible(driver, RegisterPageUI.USER_ID_TEXT);
 		return getTextElement(driver, RegisterPageUI.USER_ID_TEXT);
 		
 	}
 	public String getTextPassword() {
+		waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXT);
 		return getTextElement(driver, RegisterPageUI.PASSWORD_TEXT);
 		
 	}
