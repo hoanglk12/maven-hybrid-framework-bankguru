@@ -10,10 +10,10 @@ public class Payment {
 	public Payment() {
 
 	}
-
+	
 	public static class Payment_02 {
 		Payment payment = Payment.getPayment();
-
+		
 		public static Payment_02 getPayment_02() {
 			return new Payment_02();
 		}
@@ -23,6 +23,16 @@ public class Payment {
 		public String EDIT_CUSTOMER_STATE = "Texas";
 		public String EDIT_CUSTOMER_PIN = "166455";
 		public String SUCCESS_MSG_UPDATE_CUSTOMER = "Customer details updated Successfully!!!";
+		
+	}
+
+	public static class Payment_03 {
+		Payment payment = Payment.getPayment();
+
+		public static Payment_03 getPayment_03() {
+			return new Payment_03();
+		}
+	
 
 	}
 }
