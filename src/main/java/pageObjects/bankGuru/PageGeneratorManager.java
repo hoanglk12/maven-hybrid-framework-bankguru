@@ -28,4 +28,7 @@ public class PageGeneratorManager {
 	public static NewAccountPageObject getNewAccountPage(WebDriver driver) {
 		return new NewAccountPageObject(driver);
 	}
+	public static EditAccountPageObject getEditAccountPage(WebDriver driver) {
+		return new EditAccountPageObject(driver);
+	}
 }

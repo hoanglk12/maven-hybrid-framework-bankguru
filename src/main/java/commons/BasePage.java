@@ -689,9 +689,11 @@ public abstract class BasePage {
 		getElement(driver, getDynamicLocator(BankGuruBasePageUI.DYNAMIC_TEXTBOX_TEXTAREA, textField, tagType, idValue)).sendKeys(key);
 	}
 	public String getTextValueByRowName(WebDriver driver, String rowName) {
+		waitForElementVisible(driver, BankGuruBasePageUI.DYNAMIC_VALUE_BY_ROW_NAME, rowName);
 		return getTextElement(driver, BankGuruBasePageUI.DYNAMIC_VALUE_BY_ROW_NAME, rowName);
 	}
 	public String getTextHeaderPage(WebDriver driver) {
+		waitForElementVisible(driver, BankGuruBasePageUI.HEADER_TEXT_PAGE);
 		return getTextElement(driver, BankGuruBasePageUI.HEADER_TEXT_PAGE);
 	}
 

@@ -22,6 +22,7 @@ import pageObjects.bankGuru.PageGeneratorManager;
 public class Payment_03_Add_First_Account extends BaseTest{
 	WebDriver driver;
 	Environment environment;
+	static String firstAccountID;
 	@Parameters({"browser"})
 	@BeforeClass
 	public void initBrowser(String browser) {
@@ -38,7 +39,7 @@ public class Payment_03_Add_First_Account extends BaseTest{
 		
 	}
 	@Test
-	public void Payment_03_Edit_Customer_With_Valid_Data() {
+	public void Payment_03_Add_First_Account_Customer() {
 		log.info("Payment_03 - Step 1 - Verify Welcome message is displayed at Home Page");
 		homePage = PageGeneratorManager.getHomePage(driver);
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
@@ -63,7 +64,10 @@ public class Payment_03_Add_First_Account extends BaseTest{
 		log.info("Payment_03 - Step 6 - Click to Submit button");
 		newAccountPage.clickToButtonByNameAttribute(driver, "button2");
 		
-		log.info("Payment_03 - Step 7 - Verify first New Account created successfully with Current Amount = " + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
+		log.info("Payment_03 - Step 7 - Get Text First Account ID");
+		firstAccountID = newAccountPage.getTextValueByRowName(driver, "Account ID");
+		
+		log.info("Payment_03 - Step 8 - Verify first New Account created successfully with Current Amount = " + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
 		verifyEquals(newAccountPage.getTextHeaderPage(driver), paymentData03.SUCCESS_MSG_ADD_NEW_ACCOUNT);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer ID"), Common.getCommon().CUSTOMER_ID_VALID);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer Name"), Common.NEW_CUSTOMER_NAME);
@@ -86,5 +90,4 @@ public class Payment_03_Add_First_Account extends BaseTest{
 	private NewAccountPageObject newAccountPage;
 	private Payment_03 paymentData03;
 	
-
 }
