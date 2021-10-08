@@ -8,9 +8,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.bankguru.common.Login_01_Register_And_Login;
-import com.bankguru.common.Login_02_Create_New_Customer;
 import com.data.bankguru.Customer.Common;
-import com.data.bankguru.Payment.Payment_03;
+import com.data.bankguru.Payment.Payment_04;
 
 import commons.BaseTest;
 import environmentConfig.Environment;
@@ -29,7 +28,7 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
-		paymentData03 = Payment_03.getPayment_03();
+		paymentData04 = Payment_04.getPayment_04();
 				
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		loginPage.enterToTextBoxByTextTagAndName(driver, Login_01_Register_And_Login.userID, "UserID", "input", "uid");
@@ -49,28 +48,28 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 		editAccountPage = PageGeneratorManager.getEditAccountPage(driver);
 		
 		log.info("Verify 'Add new account form' header text is displayed");
-		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData03.HEADER_TEXT_NEW_ACCOUNT_PAGE);
+		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData04.HEADER_TEXT_EDIT_ACCOUNT_PAGE);
 		
-		log.info("Payment_04 - Step 3 - Input to Customer id Textbox with valid data '" + Login_02_Create_New_Customer.customerID);
-		editAccountPage.enterToTextboxTextareaByTextTagAndName(driver, Login_02_Create_New_Customer.customerID, "Customer id", "input", "cusid");
+		log.info("Payment_04 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		editAccountPage.enterToTextboxTextareaByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
 		
-		log.info("Payment_04 - Step 4 - Select From Account type dropdown with data '" + paymentData03.NEW_ACCOUNT_TYPE + "'");
-		editAccountPage.selectItemFromAccountTypeDropdown(paymentData03.NEW_ACCOUNT_TYPE);
+		log.info("Payment_04 - Step 4 - Click to Submit button");
+		editAccountPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Payment_04 - Step 5 - Input to Initial Deposit Textbox with data '" + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT + "'");
-		editAccountPage.enterToInitialDepositTextbox(paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
+		log.info("Payment_04 - Step 5 - Select From Account type dropdown with data '" + paymentData04.EDIT_ACCOUNT_TYPE + "'");
+		editAccountPage.selectItemFromAccountTypeDropdown(paymentData04.EDIT_ACCOUNT_TYPE);
 		
 		log.info("Payment_04 - Step 6 - Click to Submit button");
-		editAccountPage.clickToButtonByNameAttribute(driver, "button2");
+		editAccountPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Payment_04 - Step 7 - Verify first New Account created successfully with Current Amount = " + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
-		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData03.SUCCESS_MSG_ADD_NEW_ACCOUNT);
+		log.info("Payment_04 - Step 7 - Verify first New Account updated successfully");
+		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData04.SUCCESS_MSG_ADD_NEW_ACCOUNT);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Customer ID"), Common.getCommon().CUSTOMER_ID_VALID);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Customer Name"), Common.NEW_CUSTOMER_NAME);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Email"), Common.NEW_CUSTOMER_EMAIL);
-		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Account Type"), paymentData03.NEW_ACCOUNT_TYPE);
+		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Account Type"), paymentData04.EDIT_ACCOUNT_TYPE);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Date of Opening"), getToday());
-		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Current Amount"), paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
+		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Current Amount"), paymentData04.NEW_ACCOUNT_INITIAL_DEPOSIT);
 		
 	}
 	
@@ -84,6 +83,6 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 	private HomePageObject homePage;
 	private LoginPageObject loginPage;
 	private EditAccountPageObject editAccountPage;
-	private Payment_03 paymentData03;
+	private Payment_04 paymentData04;
 	
 }

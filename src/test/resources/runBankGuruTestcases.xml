@@ -30,6 +30,7 @@
 			<class name="com.bankguru.customer.Delete_Customer" />-->
 			<class name="com.bankguru.payment.Payment_02_Edit_Customer" />
 			<class name="com.bankguru.payment.Payment_03_Add_First_Account" />
+			<class name="com.bankguru.payment.Payment_04_Edit_First_Account" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

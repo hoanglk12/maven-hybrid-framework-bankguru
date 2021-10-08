@@ -28,7 +28,7 @@ public class Payment {
 
 	public static class Payment_03 {
 		Payment payment = Payment.getPayment();
-
+		
 		public static Payment_03 getPayment_03() {
 			return new Payment_03();
 		}
@@ -36,6 +36,18 @@ public class Payment {
 		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
 		public String HEADER_TEXT_NEW_ACCOUNT_PAGE = "Add new account form";
 		public String SUCCESS_MSG_ADD_NEW_ACCOUNT = "Account Generated Successfully!!!";
+		
+	}
+	public static class Payment_04 {
+		Payment payment = Payment.getPayment();
+
+		public static Payment_04 getPayment_04() {
+			return new Payment_04();
+		}
+		public String EDIT_ACCOUNT_TYPE = "Current";
+		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
+		public String HEADER_TEXT_EDIT_ACCOUNT_PAGE = "Edit Account Entry Form";
+		public String SUCCESS_MSG_ADD_NEW_ACCOUNT = "Account details updated Successfully!!!";
 
 	}
 }
