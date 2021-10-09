@@ -63,14 +63,13 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 		editAccountPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
 		log.info("Payment_04 - Step 7 - Verify first New Account updated successfully");
-		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData04.SUCCESS_MSG_ADD_NEW_ACCOUNT);
+		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData04.SUCCESS_MSG_UPDATE_ACCOUNT);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Customer ID"), Common.getCommon().CUSTOMER_ID_VALID);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Customer Name"), Common.NEW_CUSTOMER_NAME);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Email"), Common.NEW_CUSTOMER_EMAIL);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Account Type"), paymentData04.EDIT_ACCOUNT_TYPE);
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Date of Opening"), getToday());
 		verifyEquals(editAccountPage.getTextValueByRowName(driver, "Current Amount"), paymentData04.NEW_ACCOUNT_INITIAL_DEPOSIT);
-		
 	}
 	
 	@Parameters("browser")

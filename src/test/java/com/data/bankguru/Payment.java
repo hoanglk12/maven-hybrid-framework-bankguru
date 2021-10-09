@@ -46,8 +46,8 @@ public class Payment {
 		}
 		public String EDIT_ACCOUNT_TYPE = "Current";
 		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
-		public String HEADER_TEXT_EDIT_ACCOUNT_PAGE = "Edit Account Entry Form";
-		public String SUCCESS_MSG_ADD_NEW_ACCOUNT = "Account details updated Successfully!!!";
+		public String HEADER_TEXT_EDIT_ACCOUNT_PAGE = "Edit Account Form";
+		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Account details updated Successfully!!!";
 
 	}
 }
