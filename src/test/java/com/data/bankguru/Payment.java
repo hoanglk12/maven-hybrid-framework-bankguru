@@ -40,13 +40,25 @@ public class Payment {
 	}
 	public static class Payment_04 {
 		Payment payment = Payment.getPayment();
-
+		
 		public static Payment_04 getPayment_04() {
 			return new Payment_04();
 		}
 		public String EDIT_ACCOUNT_TYPE = "Current";
 		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
 		public String HEADER_TEXT_EDIT_ACCOUNT_PAGE = "Edit Account Form";
+		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Account details updated Successfully!!!";
+		
+	}
+	public static class Payment_05 {
+		Payment payment = Payment.getPayment();
+
+		public static Payment_05 getPayment_05() {
+			return new Payment_05();
+		}
+		public String EDIT_ACCOUNT_TYPE = "Current";
+		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
+		public String HEADER_TEXT_DEPOSIT_PAGE = "Amount Deposit Form";
 		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Account details updated Successfully!!!";
 
 	}
