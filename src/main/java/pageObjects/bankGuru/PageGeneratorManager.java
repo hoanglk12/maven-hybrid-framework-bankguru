@@ -31,4 +31,7 @@ public class PageGeneratorManager {
 	public static EditAccountPageObject getEditAccountPage(WebDriver driver) {
 		return new EditAccountPageObject(driver);
 	}
+	public static DepositPageObject getDepositPage(WebDriver driver) {
+		return new DepositPageObject(driver);
+	}
 }

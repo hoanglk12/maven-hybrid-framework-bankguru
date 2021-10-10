@@ -56,10 +56,10 @@ public class Payment {
 		public static Payment_05 getPayment_05() {
 			return new Payment_05();
 		}
-		public String EDIT_ACCOUNT_TYPE = "Current";
-		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "50000";
 		public String HEADER_TEXT_DEPOSIT_PAGE = "Amount Deposit Form";
-		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Account details updated Successfully!!!";
-
+		public String DEPOSIT_AMOUNT = "5000";
+		public String DEPOSIT_DESCRIPTION = "Deposit";
+		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Transaction details of Deposit for Account";
+		public int DEPOSIT_CURRENT_AMOUNT  = Integer.parseInt(Payment_04.getPayment_04().NEW_ACCOUNT_INITIAL_DEPOSIT) + Integer.parseInt(DEPOSIT_AMOUNT);
 	}
 }

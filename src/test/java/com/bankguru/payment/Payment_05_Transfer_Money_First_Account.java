@@ -12,7 +12,7 @@ import com.data.bankguru.Payment.Payment_05;
 
 import commons.BaseTest;
 import environmentConfig.Environment;
-import pageObjects.bankGuru.EditAccountPageObject;
+import pageObjects.bankGuru.DepositPageObject;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.PageGeneratorManager;
@@ -44,12 +44,27 @@ public class Payment_05_Transfer_Money_First_Account extends BaseTest{
 		
 		log.info("Payment_05 - Step 2 - Click on menu 'Deposit' >>> Navigate to Deposit Page");
 		homePage.clickToLinkText(driver, "Deposit");
-		editAccountPage = PageGeneratorManager.getEditAccountPage(driver);
+		depositPage = PageGeneratorManager.getDepositPage(driver);
 		
 		log.info("Verify 'Amount Deposit Form' header text is displayed");
-		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData05.HEADER_TEXT_DEPOSIT_PAGE);
+		verifyEquals(depositPage.getTextHeaderPage(driver), paymentData05.HEADER_TEXT_DEPOSIT_PAGE);
 		
+		log.info("Payment_05 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		depositPage.enterToTextBoxByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
 		
+		log.info("Payment_05 - Step 4 - Input to Amount Textbox with valid data '" + paymentData05.DEPOSIT_AMOUNT);
+		depositPage.enterToTextBoxByTextTagAndName(driver, paymentData05.DEPOSIT_AMOUNT, "Amount", "input", "ammount");
+		
+		log.info("Payment_05 - Step 5 - Input to Description Textbox with valid data '" + paymentData05.DEPOSIT_DESCRIPTION);
+		depositPage.enterToTextBoxByTextTagAndName(driver, paymentData05.DEPOSIT_DESCRIPTION, "Description", "input", "desc");
+		
+		log.info("Payment_05 - Step 6 - Click to Submit button");
+		depositPage.clickToButtonByNameAttribute(driver, "AccSubmit");
+		
+		log.info("Verify message '" + paymentData05.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID + "'" + "is displayed and current amount is '" + String.valueOf(paymentData05.DEPOSIT_CURRENT_AMOUNT) + "'");
+		verifyEquals(depositPage.getTextHeaderPage(driver), paymentData05.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID);
+		verifyEquals(depositPage.getTextValueByRowName(driver, "Current Balance"), String.valueOf(paymentData05.DEPOSIT_CURRENT_AMOUNT));
+		verifyEquals(depositPage.getTextValueByRowName(driver, "Description"), paymentData05.DEPOSIT_DESCRIPTION);
 	}
 	
 	@Parameters("browser")
@@ -61,7 +76,7 @@ public class Payment_05_Transfer_Money_First_Account extends BaseTest{
 	
 	private HomePageObject homePage;
 	private LoginPageObject loginPage;
-	private EditAccountPageObject editAccountPage;
+	private DepositPageObject depositPage;
 	private Payment_05 paymentData05;
 	
 }
