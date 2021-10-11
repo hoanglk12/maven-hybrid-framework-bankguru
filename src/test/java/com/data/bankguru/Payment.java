@@ -52,7 +52,7 @@ public class Payment {
 	}
 	public static class Payment_05 {
 		Payment payment = Payment.getPayment();
-
+		
 		public static Payment_05 getPayment_05() {
 			return new Payment_05();
 		}
@@ -61,5 +61,34 @@ public class Payment {
 		public String DEPOSIT_DESCRIPTION = "Deposit";
 		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Transaction details of Deposit for Account";
 		public int DEPOSIT_CURRENT_AMOUNT  = Integer.parseInt(Payment_04.getPayment_04().NEW_ACCOUNT_INITIAL_DEPOSIT) + Integer.parseInt(DEPOSIT_AMOUNT);
+	}
+	public static class Payment_06 {
+		Payment payment = Payment.getPayment();
+
+		public static Payment_06 getPayment_06() {
+			return new Payment_06();
+		}
+		public String HEADER_TEXT_WITHDRAWAL_PAGE = "Amount Withdrawal Form";
+		public String WITHDRAWAL_AMOUNT = "15000";
+		public String WITHDRAWAL_DESCRIPTION = "Withdraw";
+		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Transaction details of Withdrawal for Account";
+		public int WITHDRAWAL_CURRENT_AMOUNT  = Payment_05.getPayment_05().DEPOSIT_CURRENT_AMOUNT - Integer.parseInt(WITHDRAWAL_AMOUNT);
+	}
+	
+	public static class Payment_07 {
+		Payment payment = Payment.getPayment();
+		
+		public static Payment_07 getPayment_07() {
+			return new Payment_07();
+		}
+		public String NEW_ACCOUNT_TYPE = "Savings";
+		public String NEW_ACCOUNT_INITIAL_DEPOSIT = "10000";
+		public String HEADER_TEXT_NEW_ACCOUNT_PAGE = "Add new account form";
+		public String SUCCESS_MSG_ADD_NEW_ACCOUNT = "Account Generated Successfully!!!";
+		public String HEADER_TEXT_FUND_TRANSFER_PAGE = "Fund transfer";
+		public String FUND_TRANSFER_AMOUNT = "10000";
+		public String FUND_TRANSFER_DESCRIPTION = "Transfer";
+		public String HEADER_TEXT_FUND_TRANSFER_DETAILs = "Fund Transfer Details";
+		
 	}
 }

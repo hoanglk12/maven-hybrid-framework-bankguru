@@ -63,6 +63,7 @@ public class Payment_05_Transfer_Money_First_Account extends BaseTest{
 		
 		log.info("Verify message '" + paymentData05.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID + "'" + "is displayed and current amount is '" + String.valueOf(paymentData05.DEPOSIT_CURRENT_AMOUNT) + "'");
 		verifyEquals(depositPage.getTextHeaderPage(driver), paymentData05.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID);
+		verifyEquals(depositPage.getTextValueByRowName(driver, "Account No"), Payment_03_Add_First_Account.firstAccountID);
 		verifyEquals(depositPage.getTextValueByRowName(driver, "Current Balance"), String.valueOf(paymentData05.DEPOSIT_CURRENT_AMOUNT));
 		verifyEquals(depositPage.getTextValueByRowName(driver, "Description"), paymentData05.DEPOSIT_DESCRIPTION);
 	}

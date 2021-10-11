@@ -34,4 +34,10 @@ public class PageGeneratorManager {
 	public static DepositPageObject getDepositPage(WebDriver driver) {
 		return new DepositPageObject(driver);
 	}
+	public static WithdrawalPageObject getWithdrawalPage(WebDriver driver) {
+		return new WithdrawalPageObject(driver);
+	}
+	public static FundTransferPageObject getFundTransferPage(WebDriver driver) {
+		return new FundTransferPageObject(driver);
+	}
 }
