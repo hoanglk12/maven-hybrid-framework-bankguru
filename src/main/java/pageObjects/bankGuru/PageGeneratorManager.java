@@ -40,4 +40,7 @@ public class PageGeneratorManager {
 	public static FundTransferPageObject getFundTransferPage(WebDriver driver) {
 		return new FundTransferPageObject(driver);
 	}
+	public static BalanceEnquiryPageObject getBalanceEnquiryPage(WebDriver driver) {
+		return new BalanceEnquiryPageObject(driver);
+	}
 }

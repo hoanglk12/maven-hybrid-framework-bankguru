@@ -47,22 +47,22 @@ public class Payment_02_Edit_Customer extends BaseTest{
 		homePage.clickToLinkText(driver, "Edit Customer");
 		editCustomerPage = PageGeneratorManager.getEditCustomerPage(driver);
 		
-		log.info("Payment_02 - Step 3 - Input to Customer ID Textbox with valid data '" + paymentData02.CUSTOMER_ID_VALID);
+		log.info("Payment_02 - Step 3 - Input to Customer ID Textbox with valid data '" + paymentData02.CUSTOMER_ID_VALID + "'");
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, paymentData02.CUSTOMER_ID_VALID, "Customer ID", "input", "cusid");
 		
 		log.info("Payment_02 - Step 4 - Click to Submit button");
 		editCustomerPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Payment_02 - Step 5 - Input to Address Textarea with valid data '" + paymentData02.EDIT_CUSTOMER_ADDRESS);
+		log.info("Payment_02 - Step 5 - Input to Address Textarea with valid data '" + paymentData02.EDIT_CUSTOMER_ADDRESS + "'");
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, paymentData02.EDIT_CUSTOMER_ADDRESS, "Address", "textarea", "addr");
 		
-		log.info("Payment_02 - Step 6 - Input to City Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_CITY);
+		log.info("Payment_02 - Step 6 - Input to City Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_CITY + "'");
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, paymentData02.EDIT_CUSTOMER_CITY, "City", "input", "city");
 		
-		log.info("Payment_02 - Step 7 - Input to State Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_STATE);
+		log.info("Payment_02 - Step 7 - Input to State Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_STATE + "'");
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, paymentData02.EDIT_CUSTOMER_STATE, "State", "input", "state");
 		
-		log.info("Payment_02 - Step 8 - Input to PIN Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_PIN);
+		log.info("Payment_02 - Step 8 - Input to PIN Textbox with valid data '" + paymentData02.EDIT_CUSTOMER_PIN + "'");
 		editCustomerPage.enterToTextboxTextareaByTextTagAndName(driver, paymentData02.EDIT_CUSTOMER_PIN, "PIN", "input", "pinno");
 		
 		log.info("Payment_02 - Step 9 - Click to Submit button");

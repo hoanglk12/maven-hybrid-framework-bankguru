@@ -50,7 +50,7 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 		log.info("Verify 'Add new account form' header text is displayed");
 		verifyEquals(editAccountPage.getTextHeaderPage(driver), paymentData04.HEADER_TEXT_EDIT_ACCOUNT_PAGE);
 		
-		log.info("Payment_04 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		log.info("Payment_04 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID + "'");
 		editAccountPage.enterToTextboxTextareaByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
 		
 		log.info("Payment_04 - Step 4 - Click to Submit button");

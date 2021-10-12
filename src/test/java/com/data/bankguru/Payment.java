@@ -25,7 +25,7 @@ public class Payment {
 		public String SUCCESS_MSG_UPDATE_CUSTOMER = "Customer details updated Successfully!!!";
 		
 	}
-
+	
 	public static class Payment_03 {
 		Payment payment = Payment.getPayment();
 		
@@ -74,7 +74,6 @@ public class Payment {
 		public String SUCCESS_MSG_UPDATE_ACCOUNT = "Transaction details of Withdrawal for Account";
 		public int WITHDRAWAL_CURRENT_AMOUNT  = Payment_05.getPayment_05().DEPOSIT_CURRENT_AMOUNT - Integer.parseInt(WITHDRAWAL_AMOUNT);
 	}
-	
 	public static class Payment_07 {
 		Payment payment = Payment.getPayment();
 		
@@ -89,6 +88,9 @@ public class Payment {
 		public String FUND_TRANSFER_AMOUNT = "10000";
 		public String FUND_TRANSFER_DESCRIPTION = "Transfer";
 		public String HEADER_TEXT_FUND_TRANSFER_DETAILs = "Fund Transfer Details";
-		
+		public String HEADER_TEXT_BALANCE_ENQUIRY_PAGE = "Balance Enquiry Form";
+		public String HEADER_TEXT_BALANCE_ENQUIRY_DETAILS_PAGE = "Balance Details for Account";
+		public String BALANCE_DETAILS_TYPE_OF_ACCOUNT = Payment_04.getPayment_04().EDIT_ACCOUNT_TYPE;
+		public int BALANCE_AMOUNT  = Payment_06.getPayment_06().WITHDRAWAL_CURRENT_AMOUNT - Integer.parseInt(FUND_TRANSFER_AMOUNT);
 	}
 }

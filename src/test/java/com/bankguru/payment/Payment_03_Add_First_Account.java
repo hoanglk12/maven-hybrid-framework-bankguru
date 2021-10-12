@@ -67,7 +67,7 @@ public class Payment_03_Add_First_Account extends BaseTest{
 		log.info("Payment_03 - Step 7 - Get Text First Account ID");
 		firstAccountID = newAccountPage.getTextValueByRowName(driver, "Account ID");
 		
-		log.info("Payment_03 - Step 8 - Verify first New Account created successfully with Current Amount = " + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT);
+		log.info("Payment_03 - Step 8 - Verify first New Account created successfully with Current Amount = " + paymentData03.NEW_ACCOUNT_INITIAL_DEPOSIT + "'");
 		verifyEquals(newAccountPage.getTextHeaderPage(driver), paymentData03.SUCCESS_MSG_ADD_NEW_ACCOUNT);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer ID"), Common.getCommon().CUSTOMER_ID_VALID);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer Name"), Common.NEW_CUSTOMER_NAME);

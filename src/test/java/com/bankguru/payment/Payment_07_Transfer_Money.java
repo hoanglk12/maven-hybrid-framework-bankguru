@@ -14,6 +14,7 @@ import com.data.bankguru.Payment.Payment_07;
 
 import commons.BaseTest;
 import environmentConfig.Environment;
+import pageObjects.bankGuru.BalanceEnquiryPageObject;
 import pageObjects.bankGuru.FundTransferPageObject;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
@@ -47,29 +48,29 @@ public class Payment_07_Transfer_Money extends BaseTest {
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
 		verifyEquals(homePage.getWelcomeTextMessage(), welcomeMessage);
 		
-		log.info("Payment_07 - Step 2 - Click on menu 'New Account' >>> Navigate to New Account Page");
+		log.info("Payment_07_00 - Step 2 - Click on menu 'New Account' >>> Navigate to New Account Page");
 		homePage.clickToLinkText(driver, "New Account");
 		newAccountPage = PageGeneratorManager.getNewAccountPage(driver);
 		
 		log.info("Verify 'Add new account form' header text is displayed");
 		verifyEquals(newAccountPage.getTextHeaderPage(driver), paymentData07.HEADER_TEXT_NEW_ACCOUNT_PAGE);
 		
-		log.info("Payment_07 - Step 3 - Input to Customer id Textbox with valid data '" + Login_02_Create_New_Customer.customerID);
+		log.info("Payment_07_00 - Step 3 - Input to Customer id Textbox with valid data '" + Login_02_Create_New_Customer.customerID);
 		newAccountPage.enterToTextboxTextareaByTextTagAndName(driver, Login_02_Create_New_Customer.customerID, "Customer id", "input", "cusid");
 		
-		log.info("Payment_07 - Step 4 - Select From Account type dropdown with data '" + paymentData07.NEW_ACCOUNT_TYPE + "'");
+		log.info("Payment_07_00 - Step 4 - Select From Account type dropdown with data '" + paymentData07.NEW_ACCOUNT_TYPE + "'");
 		newAccountPage.selectItemFromAccountTypeDropdown(paymentData07.NEW_ACCOUNT_TYPE);
 		
-		log.info("Payment_07 - Step 5 - Input to Initial Deposit Textbox with data '" + paymentData07.NEW_ACCOUNT_INITIAL_DEPOSIT + "'");
+		log.info("Payment_07_00 - Step 5 - Input to Initial Deposit Textbox with data '" + paymentData07.NEW_ACCOUNT_INITIAL_DEPOSIT + "'");
 		newAccountPage.enterToInitialDepositTextbox(paymentData07.NEW_ACCOUNT_INITIAL_DEPOSIT);
 		
-		log.info("Payment_07 - Step 6 - Click to Submit button");
+		log.info("Payment_07_00 - Step 6 - Click to Submit button");
 		newAccountPage.clickToButtonByNameAttribute(driver, "button2");
 		
-		log.info("Payment_07 - Step 7 - Get Text Second Account ID");
+		log.info("Payment_07_00 - Step 7 - Get Text Second Account ID");
 		secondAccountID = newAccountPage.getTextValueByRowName(driver, "Account ID");
 		
-		log.info("Payment_07 - Step 8 - Verify second New Account created successfully with Current Amount = " + paymentData07.NEW_ACCOUNT_INITIAL_DEPOSIT);
+		log.info("Payment_07_00 - Step 8 - Verify second New Account created successfully with Current Amount = " + paymentData07.NEW_ACCOUNT_INITIAL_DEPOSIT);
 		verifyEquals(newAccountPage.getTextHeaderPage(driver), paymentData07.SUCCESS_MSG_ADD_NEW_ACCOUNT);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer ID"), Common.getCommon().CUSTOMER_ID_VALID);
 		verifyEquals(newAccountPage.getTextValueByRowName(driver, "Customer Name"), Common.NEW_CUSTOMER_NAME);
@@ -82,29 +83,29 @@ public class Payment_07_Transfer_Money extends BaseTest {
 	
 	@Test
 	public void Payment_07_01_Transfer_Money_From_FAccount_To_SAccount() {
-		log.info("Payment_07 - Step 1 - Click on menu 'Fund Transfer' >>> Navigate to Fund Transfer Page");
+		log.info("Payment_07_01 - Step 1 - Click on menu 'Fund Transfer' >>> Navigate to Fund Transfer Page");
 		homePage.clickToLinkText(driver, "Fund Transfer");
 		fundTransferPage = PageGeneratorManager.getFundTransferPage(driver);
 		
 		log.info("Verify 'Amount Withdrawal Form' header text is displayed");
 		verifyEquals(fundTransferPage.getTextHeaderPage(driver), paymentData07.HEADER_TEXT_FUND_TRANSFER_PAGE);
 		
-		log.info("Payment_07 - Step 2 - Input to Payers account no Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		log.info("Payment_07_01 - Step 2 - Input to Payers account no Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID + "'");
 		fundTransferPage.enterToTextBoxByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Payers account no", "input", "payersaccount");
 		
-		log.info("Payment_07 - Step 3 - Input to Payees account no Textbox with valid data '" + secondAccountID);
+		log.info("Payment_07_01 - Step 3 - Input to Payees account no Textbox with valid data '" + secondAccountID + "'");
 		fundTransferPage.enterToTextBoxByTextTagAndName(driver, secondAccountID, "Payees account no", "input", "payeeaccount");
 		
-		log.info("Payment_07 - Step 4 - Input to Amount Textbox with valid data '" + paymentData07.FUND_TRANSFER_AMOUNT);
+		log.info("Payment_07_01 - Step 4 - Input to Amount Textbox with valid data '" + paymentData07.FUND_TRANSFER_AMOUNT + "'");
 		fundTransferPage.enterToTextBoxByTextTagAndName(driver, paymentData07.FUND_TRANSFER_AMOUNT, "Amount", "input", "ammount");
 		
-		log.info("Payment_07 - Step 5 - Input to Description Textbox with valid data '" + paymentData07.FUND_TRANSFER_DESCRIPTION);
+		log.info("Payment_07_01 - Step 5 - Input to Description Textbox with valid data '" + paymentData07.FUND_TRANSFER_DESCRIPTION + "'");
 		fundTransferPage.enterToTextBoxByTextTagAndName(driver, paymentData07.FUND_TRANSFER_DESCRIPTION, "Description", "input", "desc");
 		
-		log.info("Payment_07 - Step 6 - Click to Submit button");
+		log.info("Payment_07_01 - Step 6 - Click to Submit button");
 		fundTransferPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Payment_07 - Step 7 - Verify header text '" + paymentData07.HEADER_TEXT_FUND_TRANSFER_DETAILs + "is displayed and amount is '" + paymentData07.FUND_TRANSFER_AMOUNT + "'");
+		log.info("Payment_07_01 - Step 7 - Verify header text '" + paymentData07.HEADER_TEXT_FUND_TRANSFER_DETAILs + " is displayed and amount is '" + paymentData07.FUND_TRANSFER_AMOUNT + "'");
 		verifyEquals(fundTransferPage.getTextHeaderPage(driver), paymentData07.HEADER_TEXT_FUND_TRANSFER_DETAILs);
 		verifyEquals(fundTransferPage.getTextValueByRowName(driver, "From Account Number"), Payment_03_Add_First_Account.firstAccountID);
 		verifyEquals(fundTransferPage.getTextValueByRowName(driver, "To Account Number"), secondAccountID);
@@ -112,6 +113,28 @@ public class Payment_07_Transfer_Money extends BaseTest {
 		verifyEquals(fundTransferPage.getTextValueByRowName(driver, "Description"), paymentData07.FUND_TRANSFER_DESCRIPTION);
 	}
 	
+	@Test
+	public void Payment_07_02_Check_Account_Balance_On_First_Account() {
+		log.info("Payment_07_02 - Step 1 - Click on menu 'Balance Enquiry' >>> Navigate to Balance Enquiry Page");
+		homePage.clickToLinkText(driver, "Balance Enquiry");
+		balanceEnquiryPage = PageGeneratorManager.getBalanceEnquiryPage(driver);
+		
+		log.info("Verify 'Balance Enquiry Form' header text is displayed");
+		verifyEquals(fundTransferPage.getTextHeaderPage(driver), paymentData07.HEADER_TEXT_BALANCE_ENQUIRY_PAGE);
+		
+		log.info("Payment_07_02 - Step 2 - Input to Account no Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID + "'");
+		balanceEnquiryPage.enterToTextBoxByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
+				
+		log.info("Payment_07_02 - Step 3 - Click to Submit button");
+		balanceEnquiryPage.clickToButtonByNameAttribute(driver, "AccSubmit");
+		
+		log.info("Payment_07_02 - Step 4 - Verify header text '" + paymentData07.HEADER_TEXT_BALANCE_ENQUIRY_DETAILS_PAGE + " " + Payment_03_Add_First_Account.firstAccountID + "' is displayed and balance is '" + paymentData07.FUND_TRANSFER_AMOUNT + "'");
+		verifyEquals(balanceEnquiryPage.getTextHeaderPage(driver), paymentData07.HEADER_TEXT_BALANCE_ENQUIRY_DETAILS_PAGE + " " + Payment_03_Add_First_Account.firstAccountID);
+		verifyEquals(balanceEnquiryPage.getTextValueByRowName(driver, "Account No"), Payment_03_Add_First_Account.firstAccountID);
+		verifyEquals(balanceEnquiryPage.getTextValueByRowName(driver, "Type of Account"), paymentData07.BALANCE_DETAILS_TYPE_OF_ACCOUNT);
+		verifyEquals(balanceEnquiryPage.getTextValueByRowName(driver, "Balance"), String.valueOf(paymentData07.BALANCE_AMOUNT));
+		
+	}
 	@Parameters("browser")
 	@AfterClass(alwaysRun = true)
 	public void closeBrowser(String browserName) {
@@ -123,6 +146,7 @@ public class Payment_07_Transfer_Money extends BaseTest {
 	private LoginPageObject loginPage;
 	private NewAccountPageObject newAccountPage;
 	private FundTransferPageObject fundTransferPage;
+	private BalanceEnquiryPageObject balanceEnquiryPage;
 	private Payment_07 paymentData07;
 	
 }

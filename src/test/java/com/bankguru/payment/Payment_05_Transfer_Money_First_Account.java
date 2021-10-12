@@ -49,13 +49,13 @@ public class Payment_05_Transfer_Money_First_Account extends BaseTest{
 		log.info("Verify 'Amount Deposit Form' header text is displayed");
 		verifyEquals(depositPage.getTextHeaderPage(driver), paymentData05.HEADER_TEXT_DEPOSIT_PAGE);
 		
-		log.info("Payment_05 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		log.info("Payment_05 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID + "'");
 		depositPage.enterToTextBoxByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
 		
-		log.info("Payment_05 - Step 4 - Input to Amount Textbox with valid data '" + paymentData05.DEPOSIT_AMOUNT);
+		log.info("Payment_05 - Step 4 - Input to Amount Textbox with valid data '" + paymentData05.DEPOSIT_AMOUNT + "'");
 		depositPage.enterToTextBoxByTextTagAndName(driver, paymentData05.DEPOSIT_AMOUNT, "Amount", "input", "ammount");
 		
-		log.info("Payment_05 - Step 5 - Input to Description Textbox with valid data '" + paymentData05.DEPOSIT_DESCRIPTION);
+		log.info("Payment_05 - Step 5 - Input to Description Textbox with valid data '" + paymentData05.DEPOSIT_DESCRIPTION + "'");
 		depositPage.enterToTextBoxByTextTagAndName(driver, paymentData05.DEPOSIT_DESCRIPTION, "Description", "input", "desc");
 		
 		log.info("Payment_05 - Step 6 - Click to Submit button");

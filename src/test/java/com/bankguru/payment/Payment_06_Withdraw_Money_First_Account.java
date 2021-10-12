@@ -49,19 +49,19 @@ public class Payment_06_Withdraw_Money_First_Account extends BaseTest {
 		log.info("Verify 'Amount Withdrawal Form' header text is displayed");
 		verifyEquals(withdrawalPage.getTextHeaderPage(driver), paymentData06.HEADER_TEXT_WITHDRAWAL_PAGE);
 		
-		log.info("Payment_06 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID);
+		log.info("Payment_06 - Step 3 - Input to Account No Textbox with valid data '" + Payment_03_Add_First_Account.firstAccountID + "'");
 		withdrawalPage.enterToTextBoxByTextTagAndName(driver, Payment_03_Add_First_Account.firstAccountID, "Account No", "input", "accountno");
 		
-		log.info("Payment_06 - Step 4 - Input to Amount Textbox with valid data '" + paymentData06.WITHDRAWAL_AMOUNT);
+		log.info("Payment_06 - Step 4 - Input to Amount Textbox with valid data '" + paymentData06.WITHDRAWAL_AMOUNT + "'");
 		withdrawalPage.enterToTextBoxByTextTagAndName(driver, paymentData06.WITHDRAWAL_AMOUNT, "Amount", "input", "ammount");
 		
-		log.info("Payment_06 - Step 5 - Input to Description Textbox with valid data '" + paymentData06.WITHDRAWAL_DESCRIPTION);
+		log.info("Payment_06 - Step 5 - Input to Description Textbox with valid data '" + paymentData06.WITHDRAWAL_DESCRIPTION + "'");
 		withdrawalPage.enterToTextBoxByTextTagAndName(driver, paymentData06.WITHDRAWAL_DESCRIPTION, "Description", "input", "desc");
 		
 		log.info("Payment_06 - Step 6 - Click to Submit button");
 		withdrawalPage.clickToButtonByNameAttribute(driver, "AccSubmit");
 		
-		log.info("Verify message '" + paymentData06.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID + "'" + "is displayed and current amount is '" + String.valueOf(paymentData06.WITHDRAWAL_CURRENT_AMOUNT) + "'");
+		log.info("Verify message '" + paymentData06.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID + "'" + " is displayed and current amount is '" + String.valueOf(paymentData06.WITHDRAWAL_CURRENT_AMOUNT) + "'");
 		verifyEquals(withdrawalPage.getTextHeaderPage(driver), paymentData06.SUCCESS_MSG_UPDATE_ACCOUNT + " " + Payment_03_Add_First_Account.firstAccountID);
 		verifyEquals(withdrawalPage.getTextValueByRowName(driver, "Account No"), Payment_03_Add_First_Account.firstAccountID);
 		verifyEquals(withdrawalPage.getTextValueByRowName(driver, "Current Balance"), String.valueOf(paymentData06.WITHDRAWAL_CURRENT_AMOUNT));
