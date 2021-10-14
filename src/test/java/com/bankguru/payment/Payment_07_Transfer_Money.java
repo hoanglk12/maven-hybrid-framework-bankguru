@@ -29,9 +29,13 @@ public class Payment_07_Transfer_Money extends BaseTest {
 	@BeforeClass
 	public void initBrowser(String browser) {
 		String environmentName = System.getProperty("envMaven"); //only run with maven cmd line
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
+	
 		paymentData07 = Payment_07.getPayment_07();
 				
 		loginPage = PageGeneratorManager.getLoginPage(driver);

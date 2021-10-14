@@ -25,9 +25,13 @@ public class Payment_04_Edit_First_Account extends BaseTest{
 	@BeforeClass
 	public void initBrowser(String browser) {
 		String environmentName = System.getProperty("envMaven"); //only run with maven cmd line
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
+	
 		paymentData04 = Payment_04.getPayment_04();
 				
 		loginPage = PageGeneratorManager.getLoginPage(driver);

@@ -34,7 +34,7 @@
 			<class name="com.bankguru.payment.Payment_05_Transfer_Money_First_Account" />
 			<class name="com.bankguru.payment.Payment_06_Withdraw_Money_First_Account" />
 			<class name="com.bankguru.payment.Payment_07_Transfer_Money" />
-			<class name="com.bankguru.payment.Payment_08_Delete_Account" />
+			<class name="com.bankguru.payment.Payment_08_Delete_Accounts_And_Customer" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">

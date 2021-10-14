@@ -46,4 +46,5 @@ public class PageGeneratorManager {
 	public static DeleteAccountPageObject getDeleteAccountPage(WebDriver driver) {
 		return new DeleteAccountPageObject(driver);
 	}
+	
 }

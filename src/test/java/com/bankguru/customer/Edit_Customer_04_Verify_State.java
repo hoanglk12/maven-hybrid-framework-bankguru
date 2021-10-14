@@ -26,6 +26,9 @@ public class Edit_Customer_04_Verify_State extends BaseTest {
 	@BeforeClass
 	public void initBrowser(String browser) {
 		String environmentName = System.getProperty("envMaven"); //only run with maven cmd line
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());

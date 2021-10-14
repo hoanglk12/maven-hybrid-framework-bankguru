@@ -101,5 +101,7 @@ public class Payment {
 		}
 		public String HEADER_TEXT_DELETE_ACCOUNT_PAGE = "Delete Account Form";
 		public String DELETE_ACCOUNT_ALERT_MESSAGE = "Account Deleted Sucessfully";
+		public String HEADER_TEXT_DELETE_CUSTOMER_PAGE = "Delete Customer Form";
+		public String DELETE_CUSTOMER_ALERT_MESSAGE = "Customer deleted Successfully";
 	}
 }

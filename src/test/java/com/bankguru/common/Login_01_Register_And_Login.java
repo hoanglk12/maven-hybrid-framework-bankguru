@@ -21,9 +21,13 @@ public class Login_01_Register_And_Login extends BaseTest {
 	@BeforeTest
 	public void registerAndLogin(String browser) {
 		String environmentName = System.getProperty("envMaven");
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
+		
 		email = "johnwick_" + generateEmail();
 	
 		

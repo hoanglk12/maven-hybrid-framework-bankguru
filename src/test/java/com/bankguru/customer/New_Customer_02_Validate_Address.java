@@ -25,6 +25,9 @@ public class New_Customer_02_Validate_Address extends BaseTest {
 	@BeforeClass
 	public void initBrowser(String browser) {
 		String environmentName = System.getProperty("envMaven");
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());

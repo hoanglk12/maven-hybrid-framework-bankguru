@@ -23,10 +23,13 @@ public class Login_02_Create_New_Customer extends BaseTest {
 	@Test
 	public void createNewCustomer(String browser) {
 		String environmentName = System.getProperty("envMaven");
+		if (environmentName == null) {
+			environmentName = "testing";
+		}
 		ConfigFactory.setProperty("env", environmentName);
 		environment = ConfigFactory.create(Environment.class);
 		driver = getBrowser(browser, environment.appUrl());
-		
+				
 		String welcomeMessage = "Welcome To Manager's Page of Guru99 Bank";
 		loginPage = PageGeneratorManager.getLoginPage(driver);
 		loginPage.enterToTextBoxByTextTagAndName(driver, Login_01_Register_And_Login.userID, "UserID", "input", "uid");
