@@ -93,4 +93,13 @@ public class Payment {
 		public String BALANCE_DETAILS_TYPE_OF_ACCOUNT = Payment_04.getPayment_04().EDIT_ACCOUNT_TYPE;
 		public int BALANCE_AMOUNT  = Payment_06.getPayment_06().WITHDRAWAL_CURRENT_AMOUNT - Integer.parseInt(FUND_TRANSFER_AMOUNT);
 	}
+	public static class Payment_08 {
+		Payment payment = Payment.getPayment();
+		
+		public static Payment_08 getPayment_08() {
+			return new Payment_08();
+		}
+		public String HEADER_TEXT_DELETE_ACCOUNT_PAGE = "Delete Account Form";
+		public String DELETE_ACCOUNT_ALERT_MESSAGE = "Account Deleted Sucessfully";
+	}
 }

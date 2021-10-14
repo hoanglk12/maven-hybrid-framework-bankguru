@@ -43,4 +43,7 @@ public class PageGeneratorManager {
 	public static BalanceEnquiryPageObject getBalanceEnquiryPage(WebDriver driver) {
 		return new BalanceEnquiryPageObject(driver);
 	}
+	public static DeleteAccountPageObject getDeleteAccountPage(WebDriver driver) {
+		return new DeleteAccountPageObject(driver);
+	}
 }
