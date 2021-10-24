@@ -27,14 +27,15 @@
 			<class name="com.bankguru.customer.Edit_Customer_05_Verify_PIN" />
 			<class name="com.bankguru.customer.Edit_Customer_06_Verify_Telephone" />
 			<class name="com.bankguru.customer.Edit_Customer_07_Verify_Email" />
-			<class name="com.bankguru.customer.Delete_Customer" />-->
+			<class name="com.bankguru.customer.Delete_Customer" />
 			<class name="com.bankguru.payment.Payment_02_Edit_Customer" />
 			<class name="com.bankguru.payment.Payment_03_Add_First_Account" />
 			<class name="com.bankguru.payment.Payment_04_Edit_First_Account" />
 			<class name="com.bankguru.payment.Payment_05_Transfer_Money_First_Account" />
 			<class name="com.bankguru.payment.Payment_06_Withdraw_Money_First_Account" />
 			<class name="com.bankguru.payment.Payment_07_Transfer_Money" />
-			<class name="com.bankguru.payment.Payment_08_Delete_Accounts_And_Customer" />
+			<class name="com.bankguru.payment.Payment_08_Delete_Accounts_And_Customer" />-->
+			<class name="com.bankguru.changepassword.Change_Password_01_Verify_Old_Password" />
 		</classes>
 	</test> 
 	<test name="Run on Firefox Headless">
