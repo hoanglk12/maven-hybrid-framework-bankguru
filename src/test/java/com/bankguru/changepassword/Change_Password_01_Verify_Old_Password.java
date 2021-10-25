@@ -8,9 +8,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.bankguru.common.Login_01_Register_And_Login;
+import com.data.bankguru.ChangePassword;
 
 import commons.BaseTest;
 import environmentConfig.Environment;
+import pageObjects.bankGuru.ChangePasswordPageObject;
 import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.PageGeneratorManager;
@@ -43,6 +45,12 @@ public class Change_Password_01_Verify_Old_Password extends BaseTest {
 
 	@Test
 	public void Change_Password_01_Old_Password_Not_Empty() {
+		log.info("Change_Password_01 - Step 1 - Click to link 'Change Password' >>> Navigate to Change Password Page");
+		homePage.clickToLinkText(driver, "Change Password");
+		changePasswordPage = PageGeneratorManager.getChangePasswordPageObject(driver);
+		
+		log.info("Change_Password_01 - Step 2 - Verify Title Page displayed with content '" + ChangePassword.CHANGE_PASSWORD_TITLE_PAGE + "'");
+		verifyEquals(changePasswordPage.getTextHeaderPage(driver), ChangePassword.CHANGE_PASSWORD_TITLE_PAGE);
 	}
 
 	@Parameters("browser")
@@ -53,4 +61,5 @@ public class Change_Password_01_Verify_Old_Password extends BaseTest {
 	}
 	private LoginPageObject loginPage;
 	private HomePageObject homePage;
+	private ChangePasswordPageObject changePasswordPage;
 }
