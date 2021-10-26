@@ -1,6 +1,7 @@
 package com.bankguru.changepassword;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -51,6 +52,15 @@ public class Change_Password_01_Verify_Old_Password extends BaseTest {
 		
 		log.info("Change_Password_01 - Step 2 - Verify Title Page displayed with content '" + ChangePassword.CHANGE_PASSWORD_TITLE_PAGE + "'");
 		verifyEquals(changePasswordPage.getTextHeaderPage(driver), ChangePassword.CHANGE_PASSWORD_TITLE_PAGE);
+		
+		log.info("Change_Password_01 - Step 3 - Leave blank at Old Password Textbox");
+		changePasswordPage.enterToTextboxTextareaByTextTagAndName(driver, ChangePassword.OLD_PASSWORD_BLANK, "Old Password", "input", "oldpassword");
+		
+		log.info("Change_Password_01 - Step 4 - Press Tab to move to next field");
+		changePasswordPage.pressKeyboardToElementByTextTagAndName(driver, Keys.TAB, "Old Password", "input", "oldpassword");
+		
+		log.info("Change_Password_01 - Step 5 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_OLD_PASSWORD_NOT_BLANK + "'");
+		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "Old Password"), ChangePassword.ERROR_MSG_OLD_PASSWORD_NOT_BLANK);
 	}
 
 	@Parameters("browser")

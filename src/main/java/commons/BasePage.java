@@ -25,6 +25,7 @@ import pageUIs.admin.nopCommerce.AdminBasePageUI;
 import pageUIs.admin.nopCommerce.CustomersPageUI;
 import pageUIs.admin.nopCommerce.ProductDetailsPageUI;
 import pageUIs.bankGuru.BankGuruBasePageUI;
+import pageUIs.bankGuru.EditCustomerPageUI;
 import pageUIs.user.nopCommerce.BasePageUI;
 import pageUIs.user.nopCommerce.HomePageUI;
 
@@ -696,7 +697,10 @@ public abstract class BasePage {
 		waitForElementVisible(driver, BankGuruBasePageUI.HEADER_TEXT_PAGE);
 		return getTextElement(driver, BankGuruBasePageUI.HEADER_TEXT_PAGE);
 	}
-
+	public String getErrorValidationMessageByField(WebDriver driver, String fieldName) {
+		waitForElementVisible(driver, EditCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
+		return getTextElement(driver, EditCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
+	}
 	private Alert alert;
 	private WebDriverWait explicitWait; 
 	private long timeOut = 30;

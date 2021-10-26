@@ -10,4 +10,6 @@ public class ChangePasswordPageObject extends BasePage {
 	public ChangePasswordPageObject(WebDriver driver) {
 		this.driver = driver;
 	}
+
+
 }
