@@ -62,6 +62,14 @@ public class Change_Password_02_Verify_New_Password extends BaseTest {
 		log.info("Change_Password_02_New_Password_01 - Step 5 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_BLANK + "'");
 		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "New Password"), ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_BLANK);
 	}
+	@Test
+	public void Change_Password_02_New_Password_02_Must_One_Numeric() {
+		log.info("Change_Password_02_New_Password_02 - Step 1 - Enter to New Password Textbox with data '" + ChangePassword.NEW_PASSWORD_NOT_CONTAIN_NUMBER + "'");
+		changePasswordPage.enterToTextboxTextareaByTextTagAndName(driver, ChangePassword.NEW_PASSWORD_NOT_CONTAIN_NUMBER, "New Password", "input", "newpassword");
+		
+		log.info("Change_Password_02_New_Password_02 - Step 2 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_NUMBER + "'");
+		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "New Password"), ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_NUMBER);
+	}
 
 	@Parameters("browser")
 	@AfterClass(alwaysRun = true)
