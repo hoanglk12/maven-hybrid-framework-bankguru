@@ -18,7 +18,7 @@ import pageObjects.bankGuru.HomePageObject;
 import pageObjects.bankGuru.LoginPageObject;
 import pageObjects.bankGuru.PageGeneratorManager;
 
-public class Change_Password_02_Verify_New_Password extends BaseTest {
+public class Change_Password_03_Verify_Confirm_Password extends BaseTest {
 	WebDriver driver;
 	Environment environment;
 
@@ -45,7 +45,7 @@ public class Change_Password_02_Verify_New_Password extends BaseTest {
 	}
 
 	@Test
-	public void Change_Password_02_New_Password_01_Not_Empty() {
+	public void Change_Password_03_Confirm_Password_01_Match_New_Password() {
 		log.info("Change_Password_02_New_Password_01 - Step 1 - Click to link 'Change Password' >>> Navigate to Change Password Page");
 		homePage.clickToLinkText(driver, "Change Password");
 		changePasswordPage = PageGeneratorManager.getChangePasswordPageObject(driver);
@@ -62,23 +62,7 @@ public class Change_Password_02_Verify_New_Password extends BaseTest {
 		log.info("Change_Password_02_New_Password_01 - Step 5 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_BLANK + "'");
 		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "New Password"), ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_BLANK);
 	}
-	@Test
-	public void Change_Password_02_New_Password_02_Must_One_Numeric() {
-		log.info("Change_Password_02_New_Password_02 - Step 1 - Enter to New Password Textbox with data '" + ChangePassword.NEW_PASSWORD_NOT_CONTAIN_NUMBER + "'");
-		changePasswordPage.enterToTextboxTextareaByTextTagAndName(driver, ChangePassword.NEW_PASSWORD_NOT_CONTAIN_NUMBER, "New Password", "input", "newpassword");
-		
-		log.info("Change_Password_02_New_Password_02 - Step 2 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_NUMBER + "'");
-		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "New Password"), ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_NUMBER);
-	}
-	@Test
-	public void Change_Password_02_New_Password_03_Must_One_Special_Char() {
-		log.info("Change_Password_02_New_Password_03 - Step 1 - Enter to New Password Textbox with data '" + ChangePassword.NEW_PASSWORD_NOT_CONTAIN_SPECIAL_CHAR + "'");
-		changePasswordPage.enterToTextboxTextareaByTextTagAndName(driver, ChangePassword.NEW_PASSWORD_NOT_CONTAIN_SPECIAL_CHAR, "New Password", "input", "newpassword");
-		
-		log.info("Change_Password_02_New_Password_03 - Step 2 - Verify error message is displayed with content '" + ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_SPECIAL_CHAR + "'");
-		verifyEquals(changePasswordPage.getErrorValidationMessageByField(driver, "New Password"), ChangePassword.ERROR_MSG_NEW_PASSWORD_NOT_CONTAIN_SPECIAL_CHAR);
-	}
-
+	
 
 	@Parameters("browser")
 	@AfterClass(alwaysRun = true)

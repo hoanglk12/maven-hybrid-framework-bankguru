@@ -64,6 +64,9 @@ public class DataHelper {
 	public String getRandomString() {
 		return faker.regexify("[A-Za-z0-9]{10}");
 	}
+	public String getRandomStringWithoutSpecialChars() {
+		return faker.regexify("[a-zA-Z0-9]{4,10}");
+	}
 	public String getRandomStringWithoutNumber() {
 		return faker.regexify("[A-Za-z]{5}");
 	}
