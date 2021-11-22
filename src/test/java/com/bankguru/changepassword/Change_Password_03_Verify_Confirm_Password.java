@@ -22,7 +22,7 @@ public class Change_Password_03_Verify_Confirm_Password extends BaseTest {
 	WebDriver driver;
 	Environment environment;
 
-	@Parameters({ "browser" })
+	@Parameters({"browser"})
 	@BeforeClass
 	public void initBrowser(String browser) {
 		String environmentName = System.getProperty("envMaven"); // only run with maven cmd line

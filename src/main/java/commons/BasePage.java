@@ -30,10 +30,6 @@ import pageUIs.user.nopCommerce.BasePageUI;
 import pageUIs.user.nopCommerce.HomePageUI;
 
 public abstract class BasePage {
-	
-//	public static BasePage getBasePage()  {
-//		return new BasePage();
-//	}
 	public void openPageUrl(WebDriver driver, String pageUrl) {
 		driver.get(pageUrl);
 	}
@@ -213,7 +209,6 @@ public abstract class BasePage {
 	public int getElementSize(WebDriver driver, String locator, String...params) {
 		return getElements(driver, getDynamicLocator(locator, params)).size();
 	}
-
 	public void checkToCheckboxOrRadio(WebDriver driver, String locator) {
 		if (!getElement(driver, locator).isSelected()) {
 			if (driver.toString().contains("internet explorer")) {
@@ -223,7 +218,6 @@ public abstract class BasePage {
 			}
 		}
 	}
-
 	public void checkToCheckboxOrRadio(WebDriver driver, String locator, String... params) {
 		if (!getElement(driver, getDynamicLocator(locator, params)).isSelected()) {
 			if (driver.toString().contains("internet explorer")) {
@@ -524,7 +518,6 @@ public abstract class BasePage {
 		waitForElementClickable(driver, BankGuruBasePageUI.DYNAMIC_BUTTON_BY_NAME, nameValue);
 		clickToElement(driver, BankGuruBasePageUI.DYNAMIC_BUTTON_BY_NAME, nameValue);
 	}
-
 	public void openExpandIconByCardTitle(WebDriver driver, String attribute, String cardTitle) {
 		waitForElementClickable(driver, ProductDetailsPageUI.DYNAMIC_EXPAND_ICON_BY_CARD_TITLE, cardTitle);
 		if (!getAttributeValue(driver, ProductDetailsPageUI.DYNAMIC_EXPAND_ICON_BY_CARD_TITLE, attribute, cardTitle).contains("fa-minus")) {
@@ -575,7 +568,6 @@ public abstract class BasePage {
 		}
 		clickToElement(driver, CustomersPageUI.DYNAMIC_BUTTON_LINK, buttonName);
 	}
-
 	public void clickToButtonByText(WebDriver driver, String buttonText) {
 		waitForElementClickable(driver, AdminBasePageUI.DYNAMIC_BUTTON_INPUT_BY_TEXT, buttonText);
 		if (driver.toString().contains("firefox")) {

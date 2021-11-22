@@ -235,14 +235,24 @@ public class Admin extends BaseTest {
 		log.info("Admin_07 - Step 2: Navigate to Dashboard Page");
 		dashboardPage = productDetailsPage.openDashboardMenu("Dashboard");
 		dashboardPage.sleepInSecond(1);
+		
+		log.info("Admin_07 - Step 3: Open Customers >>> Customers");
 		dashboardPage.openMenuSubMenuByName("Customers", "Customers");
 		customersPage = PageGeneratorManager.getCustomersPage(driver);
 		customersPage.sleepInSecond(1);
+		
+		log.info("Admin_07 - Step 4: Click Add new");
 		customersPage.clickToButtonLinkByName("Add new");
 		customersPage.sleepInSecond(1);
+		
+		log.info("Admin_07 - Step 5: Click Expand icon at Customer Edit Page");
 		customerEditPage = PageGeneratorManager.getCustomerEditPage(driver);
 		customerEditPage.openExpandIconByCardTitle(driver, "class","Customer info");
+		
+		log.info("Admin_07 - Step 6: Close default item of Customer Roles");
 		customerEditPage.closeDefaultItemOfCustomerRoles(driver);
+		
+		
 		customerEditPage.enterToTextboxByName(driver, customerEmail, "Email");
 		customerEditPage.enterToTextboxByName(driver, customerPassword, "Password");
 		customerEditPage.enterToTextboxByName(driver, customerFirstName, "FirstName");
