@@ -693,6 +693,15 @@ public abstract class BasePage {
 		waitForElementVisible(driver, EditCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
 		return getTextElement(driver, EditCustomerPageUI.DYNAMIC_ERROR_MESSGAE_VALIDATION_BY_FIELD, fieldName);
 	}
+	public void closePopupNotInDOM(WebDriver driver, String locator, String closeIconLocator) {
+		if(getElements(driver, locator).size() > 0 && getElements(driver, locator).get(0).isDisplayed()) {
+			clickToElement(driver, closeIconLocator);
+		}
+	}
+	public void clickToEditButtonAtProductName(WebDriver driver, String productName) {
+		waitForElementClickable(driver, AdminBasePageUI.DYNAMIC_EDIT_BUTON_BY_PRODUCT_NAME, productName);
+		clickToElement(driver, AdminBasePageUI.DYNAMIC_EDIT_BUTON_BY_PRODUCT_NAME, productName);
+	}
 	private Alert alert;
 	private WebDriverWait explicitWait; 
 	private long timeOut = 30;

@@ -13,4 +13,5 @@ public class AdminBasePageUI {
 	public static final String EDIT_BUTTON = "//td[contains(@class,'button-column')]/a[contains(text(),'Edit')]";
 	public static final String DYNAMIC_CHECKBOX_TABLE_BY_NAME = "//table[@id='%s']//input[@name='%s']";
 	public static final String EXPAND_ICON_SEARCH_FORM = "//div[@class='icon-collapse']/i";
+	public static final String DYNAMIC_EDIT_BUTON_BY_PRODUCT_NAME = "//td[text()='%s']/following-sibling::td[contains(@class,'button-column')]/a";
 }

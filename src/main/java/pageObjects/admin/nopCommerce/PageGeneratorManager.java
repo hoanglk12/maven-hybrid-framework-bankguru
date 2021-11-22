@@ -29,5 +29,8 @@ public class PageGeneratorManager {
 	public static AddressPageObject getAddressPage(WebDriver driver) {
 		return new AddressPageObject(driver);
 	}
+	public static ProductEditPageObject getProductEditPage(WebDriver driver) {
+		return new ProductEditPageObject(driver);
+	}
 
 }

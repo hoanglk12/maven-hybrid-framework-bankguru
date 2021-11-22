@@ -33,8 +33,9 @@
 			<class name="com.nopcommerce.myaccount.My_Account" />
 			<class name="com.nopcommerce.search.Search_Advanced_Search" />
 			<class name="com.nopcommerce.sort.Sort_Display_Paging" />
-			<class name="com.nopcommerce.wishlist.Wishlist_Compare_RecentView" />-->
-			<class name="com.nopcommerce.admin.Admin" />
+			<class name="com.nopcommerce.wishlist.Wishlist_Compare_RecentView" />
+			<class name="com.nopcommerce.admin.Admin" />-->
+			<class name="com.nopcommerce.admin.Admin_UploadFile" />
 		</classes>
 	</test>
 	
