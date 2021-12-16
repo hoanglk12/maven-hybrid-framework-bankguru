@@ -370,7 +370,7 @@ public abstract class BaseTest {
 			});
 		}
 	}
-	
+
 	protected String getCurrentDay() {
 		DateTime nowUTC = new DateTime(DateTimeZone.UTC);
 		int day = nowUTC.getDayOfMonth();
@@ -399,20 +399,20 @@ public abstract class BaseTest {
 	protected String getToday() {
 		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
 	}
-	
-	protected String getFormatDateWithDash(String dateInput){
+
+	protected String getFormatDateWithDash(String dateInput) {
 		SimpleDateFormat fromUser = new SimpleDateFormat("MM/dd/yyyy");
 		SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reformattedStr = null;
 		try {
 			reformattedStr = myFormat.format(fromUser.parse(dateInput));
-			
+
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		return reformattedStr;
 	}
-	
+
 	public WebDriver getDriver() {
 		return this.driver;
 	}

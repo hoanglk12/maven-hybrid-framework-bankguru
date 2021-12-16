@@ -58,6 +58,9 @@ public class Admin_UploadFile extends BaseTest {
 		log.info("Admin_UploadFile_01 - Step 3: Upload picture");
 		productEditPage = PageGeneratorManager.getProductEditPage(driver);
 		productEditPage.uploadMultipleFiles(driver, arrowPicture);
+		
+		log.info("Admin_UploadFile_01 - Step 4: Verify picture uploaded successfully");
+		//verifyTrue(productEditPage.isUploadedFileDisplayed());
 	}
 	
 	
