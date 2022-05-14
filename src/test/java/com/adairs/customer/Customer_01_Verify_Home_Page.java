@@ -23,8 +23,21 @@ public class Customer_01_Verify_Home_Page extends BaseTest {
 	}
 	
 	@Test
-	public void Customer_01_Home_Page_Menu_Items() {
+	public void Customer_01_Home_Page_01_Url() {
 		verifyEquals(homePage.getCurrentPageUrl(driver), adairsUrl);
+	}
+	
+	@Test 
+	public void Customer_01_Home_Page_02_Menu_Items() {
+		verifyTrue(homePage.getAllMenuItems().contains("New"));
+		verifyTrue(homePage.getAllMenuItems().contains("Bedroom"));
+		verifyTrue(homePage.getAllMenuItems().contains("Bathroom"));
+		verifyTrue(homePage.getAllMenuItems().contains("Furniture"));
+		verifyTrue(homePage.getAllMenuItems().contains("Homewares"));
+		verifyTrue(homePage.getAllMenuItems().contains("Kids"));
+		verifyTrue(homePage.getAllMenuItems().contains("Gifts"));
+		verifyTrue(homePage.getAllMenuItems().contains("Sale"));
+		verifyTrue(homePage.getAllMenuItems().contains("Linen Lovers"));
 	}
 	
 	@Parameters("browser")
