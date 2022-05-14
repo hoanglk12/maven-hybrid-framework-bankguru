@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Adairs Ecommerce" parallel="false">
+	<listeners>
+		<listener class-name="reportConfig.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="reportConfig.ReportNGListener" />
+		<listener class-name="retryConfig.RetryListener" />
+	</listeners>
+	<parameter name="adairsFrontEndUrl" value="https://www.adairs.com.au/"/>
+	<!--<parameter name="adminUrl" value="https://adairs-upgrade-aus.niteco.com/episerver"/>-->
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<!--<class name="com.adairs.customer.Customer_01_Verify_Home_Page" />-->
+		</classes>
+	</test> 
+	<test name="Run on Firefox Headless">
+		<parameter name="browser" value="headless_firefox" />
+		<classes>
+			<!--<class name="com.bankguru.login.Login_01_Register_And_Login" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />-->
+		</classes>
+	</test> 
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.adairs.customer.Customer_01_Verify_Home_Page" />
+			<!--<class name="com.bankguru.common.Login_01_Register_And_Login" />
+			<class name="com.bankguru.common.Login_02_Create_New_Customer" />
+			<class name="com.bankguru.customer.New_Customer_01_Validate_Name" />
+			<class name="com.bankguru.customer.New_Customer_02_Validate_Address" />
+			<class name="com.bankguru.customer.New_Customer_03_Validate_City" />
+			<class name="com.bankguru.customer.New_Customer_04_Validate_State" />
+			<class name="com.bankguru.customer.New_Customer_05_Validate_PIN" />-->
+		</classes>
+	</test> 
+	<test name="Run on Edge Chromium">
+		<parameter name="browser" value="edge_chromium" />
+		<classes>
+		
+		</classes>
+	</test> 
+	
+</suite> 
